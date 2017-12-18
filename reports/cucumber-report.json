@@ -1,0 +1,53 @@
+[
+  {
+    "description": "  As admin I should be able to:\n  - create new users\n  - edit created users\n  - delete created or edited users",
+    "elements": [
+      {
+        "id": "test-users-tab;create-new-user",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Create new user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I open Add user form and fill in all field with valid date",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see created user",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 251572397
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-users-tab",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Test users tab",
+    "tags": [],
+    "uri": "D:\\Cucumber\\try3\\features\\user_tab_test.feature"
+  }
+]
