@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "selenium-cucumber-js": "^1.5.11"
+    "local-storage": "^1.4.2",
+    "selenium-cucumber-js": "^1.5.11",
+    "unirest": "^0.5.1"
   }
 }
