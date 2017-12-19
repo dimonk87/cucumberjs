@@ -11,8 +11,14 @@ module.exports = function () {
         })
     });
 
+
     this.When(/^I open Add user form and fill in all field with valid date$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
-        return driver.wait(until.elementLocated(by.css(page.loginPage.elements.firstUser)), 25000)
+        return page.usersPage.createNewUser();
     });
+    this.Then(/^I should see created user$/, function () {
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + page.usersPage.userName);
+    });
+
 };

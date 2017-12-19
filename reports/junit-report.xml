@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="test-users-tab;create-new-user" tests="2" failures="1" skipped="1">
+    <testsuite name="test-users-tab;create-new-user" tests="2" failures="0" skipped="0">
         <properties>
             <property name="URI" value="D:\Cucumber\try3\features\user_tab_test.feature">
             </property>
         </properties>
-        <testcase name="When I open Add user form and fill in all field with valid date" classname="test-users-tab;create-new-user" time="10.000820508">
-            <failure message="function timed out after 10000 milliseconds">function timed out after 10000 milliseconds</failure>
+        <testcase name="When I open Add user form and fill in all field with valid date" classname="test-users-tab;create-new-user" time="2.518453385">
         </testcase>
-        <testcase name="Then I should see created user" classname="test-users-tab;create-new-user">
-            <skipped message="">
-            </skipped>
+        <testcase name="Then I should see created user" classname="test-users-tab;create-new-user" time="0.819454036">
         </testcase>
     </testsuite>
 </testsuites>
