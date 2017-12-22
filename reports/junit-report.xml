@@ -5,11 +5,11 @@
             <property name="URI" value="D:\Cucumber\try3\features\user_tab_test.feature">
             </property>
         </properties>
-        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.0013334">
+        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.000895287">
         </testcase>
-        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="1.558042333">
+        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="2.354532738">
         </testcase>
-        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.000058942">
+        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.816674389">
         </testcase>
     </testsuite>
 </testsuites>

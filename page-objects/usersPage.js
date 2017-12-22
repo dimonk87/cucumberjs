@@ -48,11 +48,11 @@ module.exports = {
     deleteCreatedUser: function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserIcon))).click();
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserFirstConfirm))).click();
-        driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserSecondConfirm))).click();
-        return driver.wait(until.elementLocated(by.css(page.usersPage.elements.lastUserName))).then(function () {
-            return helpers.getAttributeValue(page.usersPage.elements.lastUserName, 'innerHTML');
-        }).then((element)=>{
-            expect(element).to.not.equal(page.usersPage.userName);
+        return driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserSecondConfirm)))
+            .then(function () {
+            return driver.findElement(by.css(page.usersPage.elements.deleteUserSecondConfirm)).click();
+        }).then(function () {
+            return driver.wait(until.elementLocated(by.css('mat-spinner')));
         });
     }
 

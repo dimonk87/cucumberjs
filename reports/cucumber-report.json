@@ -14,7 +14,7 @@
             "name": "I have created user with api",
             "result": {
               "status": "passed",
-              "duration": 1333400
+              "duration": 895287
             },
             "line": 19,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I choose delete created user",
             "result": {
               "status": "passed",
-              "duration": 1558042333
+              "duration": 2354532738
             },
             "line": 20,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I shouldn't see deleted user",
             "result": {
               "status": "passed",
-              "duration": 58942
+              "duration": 816674389
             },
             "line": 21,
             "match": {
@@ -52,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 202095259
+              "duration": 244520950
             },
             "hidden": true,
             "match": {

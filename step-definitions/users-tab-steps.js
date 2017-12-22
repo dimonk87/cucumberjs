@@ -47,7 +47,8 @@ module.exports = function () {
         return page.usersPage.deleteCreatedUser();
     });
     this.Then(/^I shouldn't see deleted user$/, function () {
-
+        helpers.loadPage(shared.testData.url + '/users');
+        return page.loginPage.checkExist(page.usersPage.elements.lastUserName, ' ' + page.usersPage.userName);
     });
 
 

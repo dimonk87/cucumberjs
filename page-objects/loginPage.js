@@ -21,5 +21,13 @@ module.exports = {
         }).then((element)=>{
             expect(element).to.equal(errorText);
         });
+    },
+
+    checkExist: function (selectElement, errorText) {
+        return driver.wait(until.elementsLocated(by.css(selectElement))).then(function () {
+            return helpers.getAttributeValue(selectElement, 'innerHTML');
+        }).then((element)=>{
+            expect(element).to.not.equal(errorText);
+        });
     }
 };
