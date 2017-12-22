@@ -11,7 +11,7 @@ module.exports = function () {
         })
     });
 
-
+    //Create new user
     this.When(/^I open Add user form and fill in all field with valid date$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
         return page.usersPage.createNewUser();
@@ -20,5 +20,18 @@ module.exports = function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
         return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + page.usersPage.userName);
     });
+    this.Then(/^I delete created user with api$/, function () {
+        return page.apiRequest.getIdUser()
+            .then(function (lastUserId) {
+                var urlDelete = shared.testData.url + '/api/users/' + lastUserId;
+                return page.apiRequest.deleteCreatedUserWithApi(urlDelete);
+            })
+    });
+
+    //Edit created user
+    this.Given(/^I have created user with api$/, function () {
+
+    });
+
 
 };

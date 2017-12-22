@@ -7,3 +7,7 @@ Feature: Test users tab
   Scenario: Create new user
     When I open Add user form and fill in all field with valid date
     Then I should see created user
+    And I delete created user with api
+
+  Scenario: Edit created user
+    Given I have created user with api
