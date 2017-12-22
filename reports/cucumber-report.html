@@ -271,7 +271,7 @@ pre {
 
     <div class="container">
 
-      <div class="generated-on">Fri Dec 22 2017 12:08:06 GMT+0200 (Финляндия (зима))</div>
+      <div class="generated-on">Fri Dec 22 2017 18:33:17 GMT+0200 (Финляндия (зима))</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -319,7 +319,7 @@ pre {
                                         <div style="padding-right: 30px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b>Scenario:</b>Create new user
+                                            <b>Scenario:</b>Delete created user
                                         </div>
                                         <div>
                             <span class="label-container">
@@ -348,11 +348,45 @@ pre {
                                     
                                     
                                     <span class="text">
-                        <span class="keyword highlight">When </span>
-                          <span> I open Add user form and fill in all field with valid date</span>
+                        <span class="keyword highlight">Given </span>
+                          <span> I have created user with api</span>
                           
                               <span class="step-duration">
-                               29347m 20s 508ms
+                               22m 13s 400ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I choose delete created user</span>
+                          
+                              <span class="step-duration">
+                               25967m 22s 333ms
                               </span>
                             
                          
@@ -383,44 +417,10 @@ pre {
                                     
                                     <span class="text">
                         <span class="keyword highlight">Then </span>
-                          <span> I should see created user</span>
+                          <span> I shouldn&#39;t see deleted user</span>
                           
                               <span class="step-duration">
-                               35937m 16s 804ms
-                              </span>
-                            
-                         
-                            
-                          
-                      </span>
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                            	</div>
-                            </p>
-                            
-                            
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span> I delete created user with api</span>
-                          
-                              <span class="step-duration">
-                               4028m 254ms
+                               58s 942ms
                               </span>
                             
                          

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="test-users-tab;create-new-user" tests="3" failures="0" skipped="0">
+    <testsuite name="test-users-tab;delete-created-user" tests="3" failures="0" skipped="0">
         <properties>
             <property name="URI" value="D:\Cucumber\try3\features\user_tab_test.feature">
             </property>
         </properties>
-        <testcase name="When I open Add user form and fill in all field with valid date" classname="test-users-tab;create-new-user" time="1.760840508">
+        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.0013334">
         </testcase>
-        <testcase name="Then I should see created user" classname="test-users-tab;create-new-user" time="2.156236804">
+        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="1.558042333">
         </testcase>
-        <testcase name="And I delete created user with api" classname="test-users-tab;create-new-user" time="0.241680254">
+        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.000058942">
         </testcase>
     </testsuite>
 </testsuites>

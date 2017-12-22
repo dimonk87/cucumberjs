@@ -3,48 +3,48 @@
     "description": "  As admin I should be able to:\n  - create new users\n  - edit created users\n  - delete created or edited users",
     "elements": [
       {
-        "id": "test-users-tab;create-new-user",
+        "id": "test-users-tab;delete-created-user",
         "keyword": "Scenario",
-        "line": 7,
-        "name": "Create new user",
+        "line": 18,
+        "name": "Delete created user",
         "steps": [
           {
             "arguments": [],
-            "keyword": "When ",
-            "name": "I open Add user form and fill in all field with valid date",
+            "keyword": "Given ",
+            "name": "I have created user with api",
             "result": {
               "status": "passed",
-              "duration": 1760840508
+              "duration": 1333400
             },
-            "line": 8,
+            "line": 19,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:15"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:32"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose delete created user",
+            "result": {
+              "status": "passed",
+              "duration": 1558042333
+            },
+            "line": 20,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:45"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "name": "I should see created user",
+            "name": "I shouldn't see deleted user",
             "result": {
               "status": "passed",
-              "duration": 2156236804
+              "duration": 58942
             },
-            "line": 9,
+            "line": 21,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:19"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "name": "I delete created user with api",
-            "result": {
-              "status": "passed",
-              "duration": 241680254
-            },
-            "line": 10,
-            "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:23"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:49"
             }
           },
           {
@@ -52,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 227780873
+              "duration": 202095259
             },
             "hidden": true,
             "match": {

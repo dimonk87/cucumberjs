@@ -30,6 +30,23 @@ module.exports = function () {
 
     //Edit created user
     this.Given(/^I have created user with api$/, function () {
+        return page.apiRequest.createUserWithApi();
+    });
+    this.When(/^I edit user name$/, function () {
+        helpers.loadPage(shared.testData.url + '/users');
+        return page.usersPage.editCreatedUser();
+    });
+    this.Then(/^I should see edited user$/, function () {
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' Change ' + page.usersPage.userName);
+    });
+
+    //Delete created user
+    this.When(/^I choose delete created user$/, function () {
+        helpers.loadPage(shared.testData.url + '/users');
+        return page.usersPage.deleteCreatedUser();
+    });
+    this.Then(/^I shouldn't see deleted user$/, function () {
 
     });
 

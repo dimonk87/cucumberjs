@@ -1,8 +1,3 @@
-//var userName = "user" + Math.floor(Math.random()*1000);
-//var userEmail = "mail" + Math.floor(Math.random()*1000) + "@mail.com";
-//var userPassword = "password" + Math.floor(Math.random()*100);
-var userPhone = Math.floor(Math.random()*1000) + "-" + Math.floor(Math.random()*1000);
-
 module.exports = {
 
     elements: {
@@ -26,19 +21,39 @@ module.exports = {
     userName: "user" + Math.floor(Math.random()*1000),
     userEmail: "mail" + Math.floor(Math.random()*1000) + "@mail.com",
     userPassword: "password" + Math.floor(Math.random()*100),
+    userPhone: Math.floor(Math.random()*1000) + "-" + Math.floor(Math.random()*1000),
 
     createNewUser: function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton))).click();
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).sendKeys(page.usersPage.userName);
         driver.findElement(by.css(page.usersPage.elements.userEmailField)).sendKeys(page.usersPage.userEmail);
         driver.findElement(by.css(page.usersPage.elements.userPasswordField)).sendKeys(page.usersPage.userPassword);
-        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(userPhone);
+        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         driver.findElement(by.css(page.usersPage.elements.selectUserRole)).click();
         driver.findElement(by.css(page.usersPage.elements.selecktRoleManager)).click();
-        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(userPhone);
+        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         return driver.findElement(by.css(page.usersPage.elements.addUserButton)).click();
+    },
+
+    editCreatedUser: function () {
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.editUserIcon))).click();
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).clear();
+        driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + page.usersPage.userName);
+        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
+        return driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
+            return driver.findElement(by.css(page.usersPage.elements.editUserButton)).click();
+        });
+    },
+
+    deleteCreatedUser: function () {
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserIcon))).click();
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserFirstConfirm))).click();
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.deleteUserSecondConfirm))).click();
+        return driver.wait(until.elementLocated(by.css(page.usersPage.elements.lastUserName))).then(function () {
+            return helpers.getAttributeValue(page.usersPage.elements.lastUserName, 'innerHTML');
+        }).then((element)=>{
+            expect(element).to.not.equal(page.usersPage.userName);
+        });
     }
-
-
 
 };

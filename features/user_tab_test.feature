@@ -11,3 +11,11 @@ Feature: Test users tab
 
   Scenario: Edit created user
     Given I have created user with api
+    When I edit user name
+    Then I should see edited user
+    And I delete created user with api
+
+  Scenario: Delete created user
+    Given I have created user with api
+    When I choose delete created user
+    Then I shouldn't see deleted user

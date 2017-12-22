@@ -39,6 +39,9 @@ module.exports = {
     createUserWithApi: function () {
         unirest.post(shared.testData.url + '/api/users')
             .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
-            .send({'email': page.usersPage.userEmail})
+            .send({'email': page.usersPage.userEmail, 'isBlocked': false, 'name': page.usersPage.userName, 'password': page.usersPage.userPassword, 'phone': page.usersPage.userPhone, 'role': 3})
+            .end(function (response) {
+                return response.data;
+            })
     }
 };
