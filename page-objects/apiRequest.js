@@ -1,6 +1,6 @@
 var unirest = require('unirest');
 var token;
-//var lastUserId;
+
 
 module.exports = {
 
@@ -36,11 +36,12 @@ module.exports = {
             })
     },
     
-    createUserWithApi: function () {
+    createUserWithApi: function (userName, userEmail) {
         unirest.post(shared.testData.url + '/api/users')
             .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
-            .send({'email': page.usersPage.userEmail, 'isBlocked': false, 'name': page.usersPage.userName, 'password': page.usersPage.userPassword, 'phone': page.usersPage.userPhone, 'role': 3})
+            .send({'email': userEmail, 'isBlocked': false, 'name': userName, 'password': page.usersPage.userPassword, 'phone': page.usersPage.userPhone, 'role': 3})
             .end(function (response) {
+                console.log(response.body);
                 return response.data;
             })
     }

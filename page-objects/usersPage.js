@@ -18,15 +18,16 @@ module.exports = {
         lastUserName: 'mat-row:last-of-type .mat-column-name'
     },
 
-    userName: "user" + Math.floor(Math.random()*1000),
-    userEmail: "mail" + Math.floor(Math.random()*1000) + "@mail.com",
+    //userName: "user" + Math.floor(Math.random()*1000),
+    //userEmail: "mail" + Math.floor(Math.random()*1000) + "@mail.com",
     userPassword: "password" + Math.floor(Math.random()*100),
     userPhone: Math.floor(Math.random()*1000) + "-" + Math.floor(Math.random()*1000),
 
-    createNewUser: function () {
+
+    createNewUser: function (userName, userEmail) {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton))).click();
-        driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).sendKeys(page.usersPage.userName);
-        driver.findElement(by.css(page.usersPage.elements.userEmailField)).sendKeys(page.usersPage.userEmail);
+        driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).sendKeys(userName);
+        driver.findElement(by.css(page.usersPage.elements.userEmailField)).sendKeys(userEmail);
         driver.findElement(by.css(page.usersPage.elements.userPasswordField)).sendKeys(page.usersPage.userPassword);
         driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         driver.findElement(by.css(page.usersPage.elements.selectUserRole)).click();
@@ -35,10 +36,10 @@ module.exports = {
         return driver.findElement(by.css(page.usersPage.elements.addUserButton)).click();
     },
 
-    editCreatedUser: function () {
+    editCreatedUser: function (userName) {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.editUserIcon))).click();
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).clear();
-        driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + page.usersPage.userName);
+        driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + userName);
         driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         return driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
             return driver.findElement(by.css(page.usersPage.elements.editUserButton)).click();

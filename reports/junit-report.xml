@@ -1,15 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="test-users-tab;delete-created-user" tests="3" failures="0" skipped="0">
+    <testsuite name="login-page-test;i-see-login-page" tests="1" failures="0" skipped="0">
         <properties>
-            <property name="URI" value="D:\Cucumber\try3\features\user_tab_test.feature">
+            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
             </property>
         </properties>
-        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.000895287">
+        <testcase name="Then I should see title &quot;LOGIN TO YOUR ACCOUNT&quot;" classname="login-page-test;i-see-login-page" time="0.040196711">
         </testcase>
-        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="2.354532738">
+    </testsuite>
+    <testsuite name="login-page-test;logged-in-successfull" tests="2" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
+            </property>
+        </properties>
+        <testcase name="When I logged in on page" classname="login-page-test;logged-in-successfull" time="0.264696722">
         </testcase>
-        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.816674389">
+        <testcase name="Then I should see &quot; admin&quot;" classname="login-page-test;logged-in-successfull" time="0.854108994">
+        </testcase>
+    </testsuite>
+    <testsuite name="login-page-test;try-to-log-in-with-empty-fields" tests="2" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
+            </property>
+        </properties>
+        <testcase name="When I don&apos;t fill in fields" classname="login-page-test;try-to-log-in-with-empty-fields" time="0.165828075">
+        </testcase>
+        <testcase name="Then I shouldn&apos;t be able to click" classname="login-page-test;try-to-log-in-with-empty-fields" time="0.016012821">
+        </testcase>
+    </testsuite>
+    <testsuite name="login-page-test;check-validation" tests="2" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
+            </property>
+        </properties>
+        <testcase name="When I fill in fields with incorrect data" classname="login-page-test;check-validation" time="0.218856743">
+        </testcase>
+        <testcase name="Then I shoul see an error message &quot;Incorrect password or e-mail entered. Please try again.&quot;" classname="login-page-test;check-validation" time="0.274344297">
+        </testcase>
+    </testsuite>
+    <testsuite name="test-users-tab;create-new-user" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
+            </property>
+        </properties>
+        <testcase name="When I open Add user form and fill in all field with valid date" classname="test-users-tab;create-new-user" time="2.071812685">
+        </testcase>
+        <testcase name="Then I should see created user" classname="test-users-tab;create-new-user" time="0.881284017">
+        </testcase>
+        <testcase name="And I delete created user with api" classname="test-users-tab;create-new-user" time="0.224100021">
+        </testcase>
+    </testsuite>
+    <testsuite name="test-users-tab;edit-created-user" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have created user with api" classname="test-users-tab;edit-created-user" time="0.001250997">
+        </testcase>
+        <testcase name="When I edit user name" classname="test-users-tab;edit-created-user" time="2.109620009">
+        </testcase>
+        <testcase name="Then I should see edited user" classname="test-users-tab;edit-created-user" time="0.95836432">
+        </testcase>
+        <testcase name="And I delete created user with api" classname="test-users-tab;edit-created-user" time="0.247187162">
+        </testcase>
+    </testsuite>
+    <testsuite name="test-users-tab;delete-created-user" tests="3" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.000784146">
+        </testcase>
+        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="2.354128056">
+        </testcase>
+        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.933200687">
         </testcase>
     </testsuite>
 </testsuites>

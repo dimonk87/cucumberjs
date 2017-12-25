@@ -1,7 +1,11 @@
 module.exports = function () {
 
+    var userName;
+    var userEmail;
 
     this.BeforeScenario(function () {
+        userName = "user" + Date.now();
+        userEmail = "mail" + Date.now() + "@mail.com";
         return helpers.loadPage(shared.testData.url)
             .then(function () {
                return page.apiRequest.loginWithApi();
@@ -14,11 +18,11 @@ module.exports = function () {
     //Create new user
     this.When(/^I open Add user form and fill in all field with valid date$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
-        return page.usersPage.createNewUser();
+        return page.usersPage.createNewUser(userName, userEmail);
     });
     this.Then(/^I should see created user$/, function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
-        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + page.usersPage.userName);
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + userName);
     });
     this.Then(/^I delete created user with api$/, function () {
         return page.apiRequest.getIdUser()
@@ -30,15 +34,15 @@ module.exports = function () {
 
     //Edit created user
     this.Given(/^I have created user with api$/, function () {
-        return page.apiRequest.createUserWithApi();
+        return page.apiRequest.createUserWithApi(userName, userEmail);
     });
     this.When(/^I edit user name$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
-        return page.usersPage.editCreatedUser();
+        return page.usersPage.editCreatedUser(userName);
     });
     this.Then(/^I should see edited user$/, function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
-        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' Change ' + page.usersPage.userName);
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' Change ' + userName);
     });
 
     //Delete created user
@@ -48,7 +52,7 @@ module.exports = function () {
     });
     this.Then(/^I shouldn't see deleted user$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
-        return page.loginPage.checkExist(page.usersPage.elements.lastUserName, ' ' + page.usersPage.userName);
+        return page.loginPage.checkExist(page.usersPage.elements.lastUserName, ' ' + userName);
     });
 
 

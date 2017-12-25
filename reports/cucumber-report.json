@@ -1,7 +1,332 @@
 [
   {
+    "description": "  As an admin I want to check login page\n  I want to know abaut errors with incorrect logged in\n  I should be able to sign in with valid date",
+    "elements": [
+      {
+        "id": "login-page-test;i-see-login-page",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "I see login page",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see title \"LOGIN TO YOUR ACCOUNT\"",
+            "result": {
+              "status": "passed",
+              "duration": 40196711
+            },
+            "line": 7,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:16"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 2427288802
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "login-page-test;logged-in-successfull",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Logged in successfull",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I logged in on page",
+            "result": {
+              "status": "passed",
+              "duration": 264696722
+            },
+            "line": 10,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see \" admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 854108994
+            },
+            "line": 11,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 220433538
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "login-page-test;try-to-log-in-with-empty-fields",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Try to log in with empty fields",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I don't fill in fields",
+            "result": {
+              "status": "passed",
+              "duration": 165828075
+            },
+            "line": 14,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:21"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I shouldn't be able to click",
+            "result": {
+              "status": "passed",
+              "duration": 16012821
+            },
+            "line": 15,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 2431271114
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "login-page-test;check-validation",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Check validation",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I fill in fields with incorrect data",
+            "result": {
+              "status": "passed",
+              "duration": 218856743
+            },
+            "line": 18,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I shoul see an error message \"Incorrect password or e-mail entered. Please try again.\"",
+            "result": {
+              "status": "passed",
+              "duration": 274344297
+            },
+            "line": 19,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\login-page-steps.js:35"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 2430709543
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-page-test",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Login page test",
+    "tags": [],
+    "uri": "D:/Cucumber/try3/features/login_page_test.feature"
+  },
+  {
     "description": "  As admin I should be able to:\n  - create new users\n  - edit created users\n  - delete created or edited users",
     "elements": [
+      {
+        "id": "test-users-tab;create-new-user",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Create new user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I open Add user form and fill in all field with valid date",
+            "result": {
+              "status": "passed",
+              "duration": 2071812685
+            },
+            "line": 8,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see created user",
+            "result": {
+              "status": "passed",
+              "duration": 881284017
+            },
+            "line": 9,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:23"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I delete created user with api",
+            "result": {
+              "status": "passed",
+              "duration": 224100021
+            },
+            "line": 10,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 223269835
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "test-users-tab;edit-created-user",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Edit created user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have created user with api",
+            "result": {
+              "status": "passed",
+              "duration": 1250997
+            },
+            "line": 13,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:36"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I edit user name",
+            "result": {
+              "status": "passed",
+              "duration": 2109620009
+            },
+            "line": 14,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:39"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see edited user",
+            "result": {
+              "status": "passed",
+              "duration": 958364320
+            },
+            "line": 15,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:43"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I delete created user with api",
+            "result": {
+              "status": "passed",
+              "duration": 247187162
+            },
+            "line": 16,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 269673732
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
       {
         "id": "test-users-tab;delete-created-user",
         "keyword": "Scenario",
@@ -14,11 +339,11 @@
             "name": "I have created user with api",
             "result": {
               "status": "passed",
-              "duration": 895287
+              "duration": 784146
             },
             "line": 19,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:32"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:36"
             }
           },
           {
@@ -27,11 +352,11 @@
             "name": "I choose delete created user",
             "result": {
               "status": "passed",
-              "duration": 2354532738
+              "duration": 2354128056
             },
             "line": 20,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:45"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:49"
             }
           },
           {
@@ -40,11 +365,11 @@
             "name": "I shouldn't see deleted user",
             "result": {
               "status": "passed",
-              "duration": 816674389
+              "duration": 933200687
             },
             "line": 21,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:49"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\users-tab-steps.js:53"
             }
           },
           {
@@ -52,7 +377,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 244520950
+              "duration": 253966476
             },
             "hidden": true,
             "match": {
@@ -69,6 +394,6 @@
     "line": 1,
     "name": "Test users tab",
     "tags": [],
-    "uri": "D:\\Cucumber\\try3\\features\\user_tab_test.feature"
+    "uri": "D:/Cucumber/try3/features/user_tab_test.feature"
   }
 ]
