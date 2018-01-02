@@ -10,12 +10,14 @@ module.exports = {
         editUserButton: 'button[aria-label="Edit user"]',
         selectUserRole: 'mat-select.mat-select',
         selecktRoleManager: 'mat-option[role=option]:nth-of-type(2)',
+        selecktRoleAuditor: 'mat-option[role=option]:nth-of-type(4)',
         selektList: '.mat-select-content',
         editUserIcon: 'mat-row:last-of-type [tabindex="0"]',
         deleteUserIcon: 'mat-row:last-of-type button:last-of-type',
         deleteUserFirstConfirm: 'fuse-delete-dialog .mat-dialog-actions button:first-of-type',
         deleteUserSecondConfirm: 'fuse-delete-dialog-confirm .mat-dialog-actions .mat-button:first-of-type',
-        lastUserName: 'mat-row:last-of-type .mat-column-name'
+        lastUserName: 'mat-row:last-of-type .mat-column-name',
+        lastUserRole: 'mat-row:last-of-type .mat-column-role'
     },
 
     //userName: "user" + Math.floor(Math.random()*1000),
@@ -41,6 +43,8 @@ module.exports = {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).clear();
         driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + userName);
         driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
+        driver.findElement(by.css(page.usersPage.elements.selectUserRole)).click();
+        driver.findElement(by.css(page.usersPage.elements.selecktRoleAuditor)).click();
         return driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
             return driver.findElement(by.css(page.usersPage.elements.editUserButton)).click();
         });

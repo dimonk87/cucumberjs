@@ -22,10 +22,11 @@ module.exports = function () {
     });
     this.Then(/^I should see created user$/, function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
-        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + userName);
+        page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + userName);
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserRole, 'Manager');
     });
     this.Then(/^I delete created user with api$/, function () {
-        return page.apiRequest.getIdUser()
+        return page.apiRequest.getIdUser('/api/users')
             .then(function (lastUserId) {
                 var urlDelete = shared.testData.url + '/api/users/' + lastUserId;
                 return page.apiRequest.deleteCreatedUserWithApi(urlDelete);
@@ -42,7 +43,8 @@ module.exports = function () {
     });
     this.Then(/^I should see edited user$/, function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
-        return page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' Change ' + userName);
+        page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' Change ' + userName);
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserRole, '\n            auditor\n          ');
     });
 
     //Delete created user

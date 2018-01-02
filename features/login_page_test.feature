@@ -3,6 +3,7 @@ Feature: Login page test
   I want to know abaut errors with incorrect logged in
   I should be able to sign in with valid date
 
+  @no_api
   Scenario: I see login page
     Then I should see title "LOGIN TO YOUR ACCOUNT"
 

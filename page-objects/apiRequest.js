@@ -18,9 +18,9 @@ module.exports = {
         })
     },
     
-    getIdUser: function () {
+    getIdUser: function (apiUsers) {
         return new Promise(function (resolve, reject) {
-            unirest.get(shared.testData.url + '/api/users')
+            unirest.get(shared.testData.url + apiUsers)
                 .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
                 .end(function(response) {
                     resolve(response.body.data[response.body.data.length - 1].id);
@@ -44,5 +44,16 @@ module.exports = {
                 console.log(response.body);
                 return response.data;
             })
+    },
+
+    createPartnerWithApi: function (partnerName, partnerEmail, partnerCompany) {
+        unirest.post(shared.testData.url + '/api/partners')
+            .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
+            .send({'email': partnerEmail, 'name': partnerName, 'company': partnerCompany})
+            .end(function (response) {
+                console.log(response.body);
+                return response.data;
+            })
     }
+
 };

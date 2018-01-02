@@ -4,17 +4,18 @@ module.exports = function () {
         return helpers.loadPage(shared.testData.url);
     })
 
+    //I see login page
+    this.Then(/^I should see title "([^"]*)"$/, function (title) {
+        driver.wait(until.elementLocated(by.css(page.loginPage.elements.loginTitle)));
+        return page.loginPage.checkErrors(page.loginPage.elements.loginTitle, title);
+    });
+
     //Logged in successfull
     this.When(/^I logged in on page$/, function () {
         return page.loginPage.loginFunction(shared.testData.userEmail, shared.testData.password);
     });
     this.Then(/^I should see "([^"]*)"$/, function (title) {
         return page.loginPage.checkErrors(page.loginPage.elements.firstUser, title);
-    });
-
-    //I see login page
-    this.Then(/^I should see title "([^"]*)"$/, function (title) {
-        return page.loginPage.checkErrors(page.loginPage.elements.loginTitle, title);
     });
 
     //Try to log in with empty fields
