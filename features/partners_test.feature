@@ -5,20 +5,23 @@ Feature: Test partners tab
   - copy created partners
   - delete created or edited partners
 
-  @partner
+  Background:
+    Given I am logged in in app
+
+  @partner @api
   Scenario: Create new partner
     When I open Add Partner form and fill in all field
     Then I should see created partner
     And I delete created partner with API
 
-  @partner
+  @partner @api
   Scenario: Edit created partner
     Given I have created partner with API
     When I edit partner's info
     Then I should see edited partner with new data
     And I delete created partner with API
 
-  @partner
+  @partner @api
   Scenario: Copy created partner
     Given I have created partner with API
     When I click copy and see Edit form
@@ -26,7 +29,7 @@ Feature: Test partners tab
     And I should see copied partner
     And I delete created partner with API
 
-  @partner
+  @partner @api
   Scenario: Delete created partner
     Given I have created partner with API
     When I choose delete created partner

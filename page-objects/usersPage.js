@@ -42,8 +42,7 @@ module.exports = {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.editUserIcon))).click();
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).clear();
         driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + userName);
-        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
-        driver.findElement(by.css(page.usersPage.elements.selectUserRole)).click();
+        helpers.clickHiddenElement(page.usersPage.elements.selectUserRole);
         driver.findElement(by.css(page.usersPage.elements.selecktRoleAuditor)).click();
         return driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
             return driver.findElement(by.css(page.usersPage.elements.editUserButton)).click();

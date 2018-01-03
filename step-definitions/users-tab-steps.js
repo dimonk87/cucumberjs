@@ -3,17 +3,30 @@ module.exports = function () {
     var userName;
     var userEmail;
 
-    this.BeforeScenario(function () {
+    // this.BeforeScenario(function () {
+    //     userName = "user" + Date.now();
+    //     userEmail = "mail" + Date.now() + "@mail.com";
+    //     return helpers.loadPage(shared.testData.url)
+    //         .then(function () {
+    //            return page.apiRequest.loginWithApi();
+    //     }).then(function (token) {
+    //         driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
+    //         driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
+    //     })
+    // });
+
+    this.Given(/^I am logged in$/, function () {
         userName = "user" + Date.now();
         userEmail = "mail" + Date.now() + "@mail.com";
         return helpers.loadPage(shared.testData.url)
             .then(function () {
-               return page.apiRequest.loginWithApi();
-        }).then(function (token) {
-            driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
-            driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
-        })
+                return page.apiRequest.loginWithApi();
+            }).then(function (token) {
+                driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
+                driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
+            })
     });
+
 
     //Create new user
     this.When(/^I open Add user form and fill in all field with valid date$/, function () {
@@ -23,7 +36,7 @@ module.exports = function () {
     this.Then(/^I should see created user$/, function () {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton)));
         page.loginPage.checkErrors(page.usersPage.elements.lastUserName, ' ' + userName);
-        return page.loginPage.checkErrors(page.usersPage.elements.lastUserRole, 'Manager');
+        return page.loginPage.checkErrors(page.usersPage.elements.lastUserRole, '\n            manager\n          ');
     });
     this.Then(/^I delete created user with api$/, function () {
         return page.apiRequest.getIdUser('/api/users')

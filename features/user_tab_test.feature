@@ -4,17 +4,23 @@ Feature: Test users tab
   - edit created users
   - delete created or edited users
 
+  Background:
+    Given I am logged in
+
+  @user @api
   Scenario: Create new user
     When I open Add user form and fill in all field with valid date
     Then I should see created user
     And I delete created user with api
 
+  @user @api
   Scenario: Edit created user
     Given I have created user with api
     When I edit user name
     Then I should see edited user
     And I delete created user with api
 
+  @user @api
   Scenario: Delete created user
     Given I have created user with api
     When I choose delete created user

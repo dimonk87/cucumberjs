@@ -1,8 +1,12 @@
 module.exports = function () {
 
-    this.BeforeScenario(function () {
+    // this.BeforeScenario(function () {
+    //     return helpers.loadPage(shared.testData.url);
+    // })
+
+    this.Given(/^I open sign in page$/, function () {
         return helpers.loadPage(shared.testData.url);
-    })
+    });
 
     //I see login page
     this.Then(/^I should see title "([^"]*)"$/, function (title) {
@@ -35,6 +39,21 @@ module.exports = function () {
     });
     this.Then(/^I shoul see an error message "([^"]*)"$/, function (title) {
         return page.loginPage.checkErrors(page.loginPage.elements.errorMessage, title);
+    });
+
+    //Logged in successfull as manager
+    this.When(/^I logged in as a manager$/, function () {
+        return page.loginPage.loginFunction(shared.testData.managerEmail, shared.testData.password);
+    });
+
+    //Logged in successfull as viewer
+    this.When(/^I logged in as a viewer$/, function () {
+        return page.loginPage.loginFunction(shared.testData.viewerEmail, shared.testData.password);
+    });
+    this.Then(/^I should see profile name "([^"]*)"$/, function (title) {
+        driver.wait(until.elementLocated(by.css(page.loginPage.elements.processingTabLink))).click();
+        driver.wait(until.elementLocated(by.css(page.loginPage.elements.firstProcess)));
+        return page.loginPage.checkErrors(page.loginPage.elements.profileName, title);
     });
 
 

@@ -6,7 +6,11 @@ module.exports = {
         submitButton: by.css('.submit-button'),
         firstUser: 'mat-row:first-of-type mat-cell:nth-of-type(2)',
         loginTitle: '.title',
-        errorMessage: 'mat-error'
+        errorMessage: 'mat-error',
+        profileName: '.user-button div span',
+        logOutButton: '.user-button',
+        processingTabLink: '[href="/points"]',
+        firstProcess: 'mat-row:first-of-type .mat-column-name'
     },
 
     loginFunction: function (userEmail, userPassword) {
