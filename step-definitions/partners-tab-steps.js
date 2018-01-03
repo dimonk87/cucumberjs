@@ -4,19 +4,6 @@ module.exports = function () {
     var partnerEmail;
     var partnerCompany;
 
-    // this.BeforeScenario(function () {
-    //     partnerName = "user" + Date.now();
-    //     partnerEmail = "mail" + Date.now() + "@mail.com";
-    //     partnerCompany = "LTD" + Math.floor(Math.random()*100);
-    //     return helpers.loadPage(shared.testData.url)
-    //         .then(function () {
-    //             return page.apiRequest.loginWithApi();
-    //         }).then(function (token) {
-    //             driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
-    //             driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
-    //         })
-    // });
-
     this.Given(/^I am logged in in app$/, function () {
         partnerName = "user" + Date.now();
         partnerEmail = "mail" + Date.now() + "@mail.com";

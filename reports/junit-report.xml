@@ -1,207 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="login-page-test;i-see-login-page" tests="2" failures="0" skipped="0">
+    <testsuite name="test-processing-points;create-new-processing-point" tests="3" failures="1" skipped="0">
         <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
+            <property name="@process" value="true">
+            </property>
+            <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
             </property>
         </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;i-see-login-page" time="4.125272098">
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.577095089">
         </testcase>
-        <testcase name="Then I should see title &quot;LOGIN TO YOUR ACCOUNT&quot;" classname="login-page-test;i-see-login-page" time="0.290192814">
+        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.001364191">
         </testcase>
-    </testsuite>
-    <testsuite name="login-page-test;logged-in-successfull-as-admin" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;logged-in-successfull-as-admin" time="3.514330011">
-        </testcase>
-        <testcase name="When I logged in on page" classname="login-page-test;logged-in-successfull-as-admin" time="0.479445797">
-        </testcase>
-        <testcase name="Then I should see &quot; admin&quot;" classname="login-page-test;logged-in-successfull-as-admin" time="2.388856452">
-        </testcase>
-    </testsuite>
-    <testsuite name="login-page-test;try-to-log-in-with-empty-fields" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;try-to-log-in-with-empty-fields" time="3.472272653">
-        </testcase>
-        <testcase name="When I don&apos;t fill in fields" classname="login-page-test;try-to-log-in-with-empty-fields" time="0.374382896">
-        </testcase>
-        <testcase name="Then I shouldn&apos;t be able to click" classname="login-page-test;try-to-log-in-with-empty-fields" time="0.013963891">
-        </testcase>
-    </testsuite>
-    <testsuite name="login-page-test;check-validation" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;check-validation" time="3.555257778">
-        </testcase>
-        <testcase name="When I fill in fields with incorrect data" classname="login-page-test;check-validation" time="0.420330192">
-        </testcase>
-        <testcase name="Then I shoul see an error message &quot;Incorrect password or e-mail entered. Please try again.&quot;" classname="login-page-test;check-validation" time="0.369275979">
-        </testcase>
-    </testsuite>
-    <testsuite name="login-page-test;logged-in-successfull-as-manager" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;logged-in-successfull-as-manager" time="3.566716451">
-        </testcase>
-        <testcase name="When I logged in as a manager" classname="login-page-test;logged-in-successfull-as-manager" time="0.473080259">
-        </testcase>
-        <testcase name="Then I should see &quot; manager&quot;" classname="login-page-test;logged-in-successfull-as-manager" time="1.042518345">
-        </testcase>
-    </testsuite>
-    <testsuite name="login-page-test;logged-in-successfull-as-viewer" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="D:/Cucumber/try3/features/login_page_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I open sign in page" classname="login-page-test;logged-in-successfull-as-viewer" time="3.554381553">
-        </testcase>
-        <testcase name="When I logged in as a viewer" classname="login-page-test;logged-in-successfull-as-viewer" time="0.46617309">
-        </testcase>
-        <testcase name="Then I should see profile name &quot;viewer&quot;" classname="login-page-test;logged-in-successfull-as-viewer" time="1.725110928">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-partners-tab;create-new-partner" tests="4" failures="0" skipped="0">
-        <properties>
-            <property name="@partner" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/partners_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in in app" classname="test-partners-tab;create-new-partner" time="3.946178405">
-        </testcase>
-        <testcase name="When I open Add Partner form and fill in all field" classname="test-partners-tab;create-new-partner" time="1.546795223">
-        </testcase>
-        <testcase name="Then I should see created partner" classname="test-partners-tab;create-new-partner" time="1.129334758">
-        </testcase>
-        <testcase name="And I delete created partner with API" classname="test-partners-tab;create-new-partner" time="0.215504852">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-partners-tab;edit-created-partner" tests="5" failures="0" skipped="0">
-        <properties>
-            <property name="@partner" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/partners_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in in app" classname="test-partners-tab;edit-created-partner" time="4.832785204">
-        </testcase>
-        <testcase name="Given I have created partner with API" classname="test-partners-tab;edit-created-partner" time="0.000764205">
-        </testcase>
-        <testcase name="When I edit partner&apos;s info" classname="test-partners-tab;edit-created-partner" time="2.317406536">
-        </testcase>
-        <testcase name="Then I should see edited partner with new data" classname="test-partners-tab;edit-created-partner" time="2.12853419">
-        </testcase>
-        <testcase name="And I delete created partner with API" classname="test-partners-tab;edit-created-partner" time="0.199255384">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-partners-tab;copy-created-partner" tests="6" failures="0" skipped="0">
-        <properties>
-            <property name="@partner" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/partners_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in in app" classname="test-partners-tab;copy-created-partner" time="3.988639859">
-        </testcase>
-        <testcase name="Given I have created partner with API" classname="test-partners-tab;copy-created-partner" time="0.000557758">
-        </testcase>
-        <testcase name="When I click copy and see Edit form" classname="test-partners-tab;copy-created-partner" time="2.061995301">
-        </testcase>
-        <testcase name="Then I save changes" classname="test-partners-tab;copy-created-partner" time="0.000249847">
-        </testcase>
-        <testcase name="And I should see copied partner" classname="test-partners-tab;copy-created-partner" time="0.822957285">
-        </testcase>
-        <testcase name="And I delete created partner with API" classname="test-partners-tab;copy-created-partner" time="0.230754343">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-partners-tab;delete-created-partner" tests="4" failures="0" skipped="0">
-        <properties>
-            <property name="@partner" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/partners_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in in app" classname="test-partners-tab;delete-created-partner" time="3.984280139">
-        </testcase>
-        <testcase name="Given I have created partner with API" classname="test-partners-tab;delete-created-partner" time="0.000419932">
-        </testcase>
-        <testcase name="When I choose delete created partner" classname="test-partners-tab;delete-created-partner" time="2.939050128">
-        </testcase>
-        <testcase name="Then I shouldn&apos;t see deleted partner" classname="test-partners-tab;delete-created-partner" time="0.745423056">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-users-tab;create-new-user" tests="4" failures="0" skipped="0">
-        <properties>
-            <property name="@user" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in" classname="test-users-tab;create-new-user" time="4.177738007">
-        </testcase>
-        <testcase name="When I open Add user form and fill in all field with valid date" classname="test-users-tab;create-new-user" time="2.337229526">
-        </testcase>
-        <testcase name="Then I should see created user" classname="test-users-tab;create-new-user" time="1.01885967">
-        </testcase>
-        <testcase name="And I delete created user with api" classname="test-users-tab;create-new-user" time="0.273128409">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-users-tab;edit-created-user" tests="5" failures="0" skipped="0">
-        <properties>
-            <property name="@user" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in" classname="test-users-tab;edit-created-user" time="3.893857653">
-        </testcase>
-        <testcase name="Given I have created user with api" classname="test-users-tab;edit-created-user" time="0.000916694">
-        </testcase>
-        <testcase name="When I edit user name" classname="test-users-tab;edit-created-user" time="2.456717597">
-        </testcase>
-        <testcase name="Then I should see edited user" classname="test-users-tab;edit-created-user" time="0.887906475">
-        </testcase>
-        <testcase name="And I delete created user with api" classname="test-users-tab;edit-created-user" time="0.2960003">
-        </testcase>
-    </testsuite>
-    <testsuite name="test-users-tab;delete-created-user" tests="4" failures="0" skipped="0">
-        <properties>
-            <property name="@user" value="true">
-            </property>
-            <property name="@api" value="true">
-            </property>
-            <property name="URI" value="D:/Cucumber/try3/features/user_tab_test.feature">
-            </property>
-        </properties>
-        <testcase name="Given I am logged in" classname="test-users-tab;delete-created-user" time="3.912879782">
-        </testcase>
-        <testcase name="Given I have created user with api" classname="test-users-tab;delete-created-user" time="0.00051905">
-        </testcase>
-        <testcase name="When I choose delete created user" classname="test-users-tab;delete-created-user" time="2.7902173">
-        </testcase>
-        <testcase name="Then I shouldn&apos;t see deleted user" classname="test-users-tab;delete-created-user" time="0.718432788">
+        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="0.000203221">
+            <failure message="ReferenceError: partnerCompany is not defined">ReferenceError: partnerCompany is not defined
+    at createWorld.&lt;anonymous&gt; (D:\Cucumber\try3\step-definitions\process-tab-steps.js:25:90)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)</failure>
         </testcase>
     </testsuite>
 </testsuites>
