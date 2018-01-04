@@ -19,7 +19,7 @@ module.exports = function () {
     this.When(/^I field in all required fields$/, function () {
         helpers.loadPage(shared.testData.url + '/points');
         page.processPage.addProcessingPoint(processName, ownerName);
-        return page.processPage.addInterface();
+        page.processPage.addInterface();
     });
     this.Then(/^I should see created processing point$/, function () {
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));

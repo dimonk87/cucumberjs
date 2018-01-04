@@ -14,7 +14,7 @@
             "name": "I am logged in in app as admin",
             "result": {
               "status": "passed",
-              "duration": 4494205563
+              "duration": 4733876116
             },
             "line": 9,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I field in all required fields",
             "result": {
               "status": "passed",
-              "duration": 3560943860
+              "duration": 2368566
             },
             "line": 13,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I should see created processing point",
             "result": {
               "status": "failed",
-              "duration": 421984,
+              "duration": 207620,
               "error_message": "ReferenceError: partnerCompany is not defined\n    at createWorld.<anonymous> (D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:26:90)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)"
             },
             "line": 14,
@@ -53,7 +53,7 @@
             "keyword": "After ",
             "result": {
               "status": "failed",
-              "duration": 10000589429,
+              "duration": 9999563940,
               "error_message": "function timed out after 10000 milliseconds"
             },
             "hidden": true,
