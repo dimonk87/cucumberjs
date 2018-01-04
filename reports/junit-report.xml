@@ -7,13 +7,13 @@
             <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
             </property>
         </properties>
-        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.577095089">
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.494205563">
         </testcase>
-        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.001364191">
+        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="3.56094386">
         </testcase>
-        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="0.000203221">
+        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="0.000421984">
             <failure message="ReferenceError: partnerCompany is not defined">ReferenceError: partnerCompany is not defined
-    at createWorld.&lt;anonymous&gt; (D:\Cucumber\try3\step-definitions\process-tab-steps.js:25:90)
+    at createWorld.&lt;anonymous&gt; (D:\Cucumber\try3\step-definitions\process-tab-steps.js:26:90)
     at _combinedTickCallback (internal/process/next_tick.js:131:7)
     at process._tickCallback (internal/process/next_tick.js:180:9)</failure>
         </testcase>

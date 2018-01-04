@@ -5,7 +5,7 @@ module.exports = {
         tagsForProcess: 'input[formcontrolname=tags]',
         ownerForProcess: 'input[formcontrolname=owner]',
         descriptionForProcess: '[formcontrolname=description]',
-        emailSubscribersForErrors: '[formcontrolname=emails]',
+        emailSubscribersForErrors: '[formcontrolname=email_subscribers]',
         user: '[formcontrolname=user]',
         password: '[formcontrolname=password]',
         port: '[formcontrolname=port]',
@@ -30,7 +30,7 @@ module.exports = {
 
     selects: {
         partners: '[aria-label=Partners]',
-        protocol: '[formcontrolname=protocol]',
+        protocol: '[aria-label="Protocol..."]',
         direction: '[formcontrolname=direction]',
         encryptionForFtp: '[formcontrolname=encryption]',
         executeTaskEvery: '[formcontrolname=interval]',
@@ -42,7 +42,8 @@ module.exports = {
 
     options: {
         firstOption: 'mat-option:nth-of-type(2) .mat-pseudo-checkbox',
-        lastOption: 'mat-option:last-of-type'
+        lastOption: 'mat-option:last-of-type',
+        firstOptions: 'mat-option:nth-of-type(1)'
     },
 
     descriptionForProcess: "This information about with this and this is very impotent",
@@ -58,5 +59,12 @@ module.exports = {
         driver.findElement(by.css(page.processPage.fields.ownerForProcess)).sendKeys(ownerName);
         page.processPage.chooseDropDownOption(page.processPage.selects.partners, page.processPage.options.firstOption);
         driver.findElement(by.css(page.processPage.fields.descriptionForProcess)).sendKeys(page.processPage.descriptionForProcess);
+        return driver.findElement(by.css(page.processPage.fields.emailSubscribersForErrors)).sendKeys('admin@admin.com');
+    },
+
+    addInterface: function () {
+        helpers.clickHiddenElement(page.processPage.selects.protocol);
+        return helpers.clickHiddenElement(page.processPage.options.firstOptions);
+        // page.processPage.chooseDropDownOption(page.processPage.selects.protocol, page.processPage.options.firstOptions);
     }
 }
