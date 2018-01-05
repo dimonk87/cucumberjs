@@ -14,11 +14,11 @@
             "name": "I am logged in in app as admin",
             "result": {
               "status": "passed",
-              "duration": 4733876116
+              "duration": 4579942235
             },
             "line": 9,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:6"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:7"
             }
           },
           {
@@ -27,11 +27,24 @@
             "name": "I field in all required fields",
             "result": {
               "status": "passed",
-              "duration": 2368566
+              "duration": 6581955
             },
             "line": 13,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:19"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:21"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I click button for create process",
+            "result": {
+              "status": "passed",
+              "duration": 231667
+            },
+            "line": 14,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:27"
             }
           },
           {
@@ -39,22 +52,33 @@
             "keyword": "Then ",
             "name": "I should see created processing point",
             "result": {
-              "status": "failed",
-              "duration": 207620,
-              "error_message": "ReferenceError: partnerCompany is not defined\n    at createWorld.<anonymous> (D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:26:90)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)"
+              "status": "passed",
+              "duration": 6784652623
             },
-            "line": 14,
+            "line": 15,
             "match": {
-              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:24"
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I delete created process with API",
+            "result": {
+              "status": "passed",
+              "duration": 229930022
+            },
+            "line": 16,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:35"
             }
           },
           {
             "arguments": [],
             "keyword": "After ",
             "result": {
-              "status": "failed",
-              "duration": 9999563940,
-              "error_message": "function timed out after 10000 milliseconds"
+              "status": "passed",
+              "duration": 308527275
             },
             "hidden": true,
             "match": {

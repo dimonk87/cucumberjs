@@ -11,5 +11,7 @@ Feature: Test processing points
     @process
   Scenario: Create new processing point
     When I field in all required fields
+    And I click button for create process
     Then I should see created processing point
+    And I delete created process with API
 

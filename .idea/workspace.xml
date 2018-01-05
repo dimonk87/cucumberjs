@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf81fee0-702a-4fa2-b4a1-e0a32cddef58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/features/processing_points_test.feature" afterPath="$PROJECT_DIR$/features/processing_points_test.feature" />
       <change beforePath="$PROJECT_DIR$/page-objects/processPage.js" afterPath="$PROJECT_DIR$/page-objects/processPage.js" />
       <change beforePath="$PROJECT_DIR$/reports/cucumber-report.html" afterPath="$PROJECT_DIR$/reports/cucumber-report.html" />
       <change beforePath="$PROJECT_DIR$/reports/cucumber-report.json" afterPath="$PROJECT_DIR$/reports/cucumber-report.json" />
@@ -23,7 +25,7 @@
       <file leaf-file-name="login_page_test.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/login_page_test.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="493">
               <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding />
             </state>
@@ -33,8 +35,8 @@
       <file leaf-file-name="partners_test.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/partners_test.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="238">
+              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -43,8 +45,8 @@
       <file leaf-file-name="processing_points_test.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/processing_points_test.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -53,18 +55,28 @@
       <file leaf-file-name="process-tab-steps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/step-definitions/process-tab-steps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="411">
+              <caret line="37" column="90" lean-forward="true" selection-start-line="37" selection-start-column="90" selection-end-line="37" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apiRequest.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page-objects/apiRequest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-objects/processPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="76" column="71" lean-forward="false" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
+            <state relative-caret-position="161">
+              <caret line="73" column="80" lean-forward="false" selection-start-line="73" selection-start-column="80" selection-end-line="73" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -73,8 +85,8 @@
       <file leaf-file-name="partners-tab-steps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/step-definitions/partners-tab-steps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="41" />
+            <state relative-caret-position="0">
+              <caret line="36" column="14" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="36" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -83,7 +95,7 @@
       <file leaf-file-name="partnersPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-objects/partnersPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
+            <state relative-caret-position="306">
               <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="23" />
               <folding />
             </state>
@@ -91,6 +103,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dire</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,7 +124,6 @@
         <option value="$PROJECT_DIR$/reports/cucumber-report.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="D:/DPP/dpp_lan/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/page-objects/apiRequest.js" />
         <option value="$PROJECT_DIR$/page-objects/partnersPage.js" />
         <option value="$PROJECT_DIR$/step-definitions/users-tab-steps.js" />
         <option value="$PROJECT_DIR$/features/partners_test.feature" />
@@ -117,10 +133,11 @@
         <option value="$PROJECT_DIR$/features/login_page_test.feature" />
         <option value="$PROJECT_DIR$/page-objects/loginPage.js" />
         <option value="$PROJECT_DIR$/step-definitions/login-page-steps.js" />
-        <option value="$PROJECT_DIR$/features/processing_points_test.feature" />
         <option value="$PROJECT_DIR$/step-definitions/partners-tab-steps.js" />
-        <option value="$PROJECT_DIR$/step-definitions/process-tab-steps.js" />
+        <option value="$PROJECT_DIR$/features/processing_points_test.feature" />
         <option value="$PROJECT_DIR$/page-objects/processPage.js" />
+        <option value="$PROJECT_DIR$/step-definitions/process-tab-steps.js" />
+        <option value="$PROJECT_DIR$/page-objects/apiRequest.js" />
       </list>
     </option>
   </component>
@@ -139,7 +156,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-2568" />
     <option name="y" value="-270" />
     <option name="width" value="2064" />
@@ -161,6 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,24 +191,6 @@
               <item name="try3" type="b2602c69:ProjectViewProjectNode" />
               <item name="try3" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="try3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="try3" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="try3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="try3" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="selenium-cucumber-js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="try3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="try3" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="selenium-cucumber-js" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="try3" type="b2602c69:ProjectViewProjectNode" />
@@ -215,8 +216,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,11 +289,12 @@
       <workItem from="1514880911502" duration="6552000" />
       <workItem from="1514966592301" duration="13413000" />
       <workItem from="1515052931251" duration="13835000" />
+      <workItem from="1515147296346" duration="13844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159437000" />
+    <option name="totallyTimeSpent" value="173281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -306,17 +306,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2568" y="-270" width="2064" height="1128" extended-state="6" />
-    <editor active="true" />
+    <frame x="-2568" y="-270" width="2064" height="1128" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14659427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.49802566" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3044355" sideWeight="0.22211254" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3044355" sideWeight="0.22803554" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.49802566" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3044355" sideWeight="0.77788746" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3044355" sideWeight="0.7719645" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -558,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-objects/apiRequest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/selenium-cucumber-js/runtime/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1207">
@@ -617,16 +609,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/login_page_test.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="493">
           <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/processing_points_test.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -643,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="41" column="93" lean-forward="false" selection-start-line="41" selection-start-column="88" selection-end-line="41" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,46 +649,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3213">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-objects/partnersPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/partners_test.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="238">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-objects/partnersPage.js">
+    <entry file="file://$PROJECT_DIR$/features/processing_points_test.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step-definitions/partners-tab-steps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step-definitions/process-tab-steps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="36" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page-objects/processPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="76" column="71" lean-forward="false" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
+        <state relative-caret-position="161">
+          <caret line="73" column="80" lean-forward="false" selection-start-line="73" selection-start-column="80" selection-end-line="73" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step-definitions/process-tab-steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="37" column="90" lean-forward="true" selection-start-line="37" selection-start-column="90" selection-end-line="37" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-objects/apiRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding />
         </state>
       </provider>

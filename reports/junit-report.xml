@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="test-processing-points;create-new-processing-point" tests="3" failures="1" skipped="0">
+    <testsuite name="test-processing-points;create-new-processing-point" tests="5" failures="0" skipped="0">
         <properties>
             <property name="@process" value="true">
             </property>
             <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
             </property>
         </properties>
-        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.733876116">
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.579942235">
         </testcase>
-        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.002368566">
+        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.006581955">
         </testcase>
-        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="0.00020762">
-            <failure message="ReferenceError: partnerCompany is not defined">ReferenceError: partnerCompany is not defined
-    at createWorld.&lt;anonymous&gt; (D:\Cucumber\try3\step-definitions\process-tab-steps.js:26:90)
-    at _combinedTickCallback (internal/process/next_tick.js:131:7)
-    at process._tickCallback (internal/process/next_tick.js:180:9)</failure>
+        <testcase name="And I click button for create process" classname="test-processing-points;create-new-processing-point" time="0.000231667">
+        </testcase>
+        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="6.784652623">
+        </testcase>
+        <testcase name="And I delete created process with API" classname="test-processing-points;create-new-processing-point" time="0.229930022">
         </testcase>
     </testsuite>
 </testsuites>

@@ -262,8 +262,8 @@ pre {
           <a class="navbar-brand">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg">try3</div>
           <div class="label-container">
-            <span class="label label-success" title=scenarios>Passed: 0</span>
-            <span class="label label-danger" title=scenarios>Failed: 1</span>
+            <span class="label label-success" title=scenarios>Passed: 1</span>
+            <span class="label label-danger" title=scenarios>Failed: 0</span>
           </div>
         </div>
       </div>
@@ -271,7 +271,7 @@ pre {
 
     <div class="container">
 
-      <div class="generated-on">Thu Jan 04 2018 16:03:33 GMT+0200 (Финляндия (зима))</div>
+      <div class="generated-on">Fri Jan 05 2018 17:38:25 GMT+0200 (Финляндия (зима))</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -294,8 +294,8 @@ pre {
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Test processing points
                         <span class="label-container">
+              <span class="label label-success" title="1 Scenarios Passed">1</span>
               
-              <span class="label label-danger" title="1 Scenarios Failed">1</span>
               
               
               
@@ -316,18 +316,18 @@ pre {
                                 <a data-toggle="collapse" href="#collapseScenariotry30_0">
                                     <div>
 
-                                        <div style="padding-right: 50px">
+                                        <div style="padding-right: 30px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
                                             <b>Scenario:</b>Create new processing point
                                         </div>
                                         <div>
                             <span class="label-container">
-                              <span class="label label-success" title="2 Steps Passed">2</span>
+                              <span class="label label-success" title="5 Steps Passed">5</span>
                               
                               
                               
-                              <span class="label label-danger" title="1 Steps Failed">1</span>
+                              
                               
                             </span>
                                         </div>
@@ -352,7 +352,7 @@ pre {
                           <span> I am logged in in app as admin</span>
                           
                               <span class="step-duration">
-                               78897m 56s 116ms
+                               76332m 22s 235ms
                               </span>
                             
                          
@@ -386,7 +386,7 @@ pre {
                           <span> I field in all required fields</span>
                           
                               <span class="step-duration">
-                               39m 28s 566ms
+                               109m 41s 955ms
                               </span>
                             
                          
@@ -412,7 +412,41 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I click button for create process</span>
+                          
+                              <span class="step-duration">
+                               3m 51s 667ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                            	</div>
+                            </p>
+                            
+                            
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -420,7 +454,7 @@ pre {
                           <span> I should see created processing point</span>
                           
                               <span class="step-duration">
-                               3m 27s 620ms
+                               113077m 32s 623ms
                               </span>
                             
                          
@@ -430,14 +464,6 @@ pre {
                                     
                                     
 
-                                    
-                                    <a href="#error0_02" data-toggle="collapse">+ Show Error</a>
-                                    <div id="error0_02" class="collapse">
-                                        <pre class=info>ReferenceError: partnerCompany is not defined
-    at createWorld.(anonymous) (D:\Cucumber\try3\step-definitions\process-tab-steps.js:26:90)
-    at _combinedTickCallback (internal/process/next_tick.js:131:7)
-    at process._tickCallback (internal/process/next_tick.js:180:9)</pre>
-                                    </div>
                                     
 
                                     
@@ -454,15 +480,15 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
-                        <span class="keyword highlight">After </span>
-                          <span> </span>
+                        <span class="keyword highlight">And </span>
+                          <span> I delete created process with API</span>
                           
                               <span class="step-duration">
-                               166659m 23s 940ms
+                               3832m 10s 22ms
                               </span>
                             
                          
@@ -473,11 +499,6 @@ pre {
                                     
 
                                     
-                                    <a href="#error0_03" data-toggle="collapse">+ Show Error</a>
-                                    <div id="error0_03" class="collapse">
-                                        <pre class=info>function timed out after 10000 milliseconds</pre>
-                                    </div>
-                                    
 
                                     
 
@@ -487,6 +508,8 @@ pre {
                             	</div>
                             </p>
                             
+                            
+                                
                             
                         </div>
                     </div>
@@ -524,15 +547,15 @@ pre {
         google.load("visualization", "1", {packages: ["corechart"]});
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Features",
-                                                            "failed" : 1,
-                                                            "passed" : 0,
+                                                            "failed" : 0,
+                                                            "passed" : 1,
                                                             "ambiguous" : 0
                                                         })
                                             });
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Scenarios",
-                                                            "failed" : 1,
-                                                            "passed" : 0,
+                                                            "failed" : 0,
+                                                            "passed" : 1,
                                                             "notdefined" : 0,
                                                             "pending" : 0,
                                                             "skipped" : 0,

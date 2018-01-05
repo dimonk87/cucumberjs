@@ -6,15 +6,15 @@ module.exports = {
         ownerForProcess: 'input[formcontrolname=owner]',
         descriptionForProcess: '[formcontrolname=description]',
         emailSubscribersForErrors: '[formcontrolname=email_subscribers]',
-        user: '[formcontrolname=user]',
-        password: '[formcontrolname=password]',
-        port: '[formcontrolname=port]',
+        user: '[placeholder="User"]',
+        password: '[placeholder="Password"]',
+        port: '[placeholder="Port"]',
         host: '[placeholder="Host"]',
         dir: '[placeholder="Dir"]',
         localDir: '[placeholder="Local dir"]',
-        caseName: '[formarrayname=rule_sets] [formcontrolname=name]',
-        satisfyRegex: '[formarrayname=validation_rules] [formcontrolname=value]',
-        followingActions: '[formarrayname=processing_rules] [formcontrolname=value]'
+        caseName: '[placeholder="Case name"]',
+        satisfyRegex: 'fuse-row:first-of-type [placeholder="Value"]',
+        followingActions: 'fuse-row:nth-of-type(2) [placeholder="Value"]'
     },
 
     buttons: {
@@ -34,16 +34,21 @@ module.exports = {
         direction: '[aria-label="Direction..."]',
         encryptionForFtp: '[formcontrolname=encryption]',
         executeTaskEvery: '[aria-label="Execute task every"]',
-        conectionTypeForFtp: '[formcontrolname=connection_method]',
-        satisfy: '[formcontrolname="satisfy_type"]',
-        satisfyRegexSelect: '[formarrayname=validation_rules] [formcontrolname=type_id]',
-        executeFollowingActions: '[formarrayname=processing_rules] [formcontrolname=type_id]'
+        conectionTypeForFtp: '[aria-label="Connection type FTP/SFTP..."]',
+        satisfy: '[aria-label="Satisfy select"]',
+        satisfyRegexSelect: 'fuse-row:first-of-type [aria-label="Select"]',
+        executeFollowingActions: 'fuse-row:nth-of-type(2) [aria-label="Select"'
     },
 
     options: {
         firstOption: 'mat-option:nth-of-type(2) .mat-pseudo-checkbox',
         lastOption: 'mat-option:last-of-type',
         firstOptions: 'mat-option:first-of-type'
+    },
+
+    elements: {
+        lastProcessName: 'mat-row:last-of-type .mat-column-name div',
+        interfaceDirection: 'mat-row:last-of-type .mat-column-interface_direction div'
     },
 
     descriptionForProcess: "This information about with this and this is very impotent",
@@ -66,14 +71,30 @@ module.exports = {
     addInterface: function () {
         page.processPage.chooseDropDownOption(page.processPage.selects.protocol, page.processPage.options.firstOptions);
         driver.findElement(by.css(page.processPage.fields.dir)).sendKeys(Date.now());
+        driver.findElement(by.css(page.processPage.fields.port)).sendKeys('21');
         page.processPage.chooseDropDownOption(page.processPage.selects.direction, page.processPage.options.firstOptions);
         driver.findElement(by.css(page.processPage.fields.host)).sendKeys(Date.now());
         page.processPage.chooseDropDownOption(page.processPage.selects.encryptionForFtp, page.processPage.options.lastOption);
         page.processPage.chooseDropDownOption(page.processPage.selects.executeTaskEvery, page.processPage.options.firstOptions);
         driver.findElement(by.css(page.processPage.fields.localDir)).sendKeys(Date.now());
+        page.processPage.chooseDropDownOption(page.processPage.selects.conectionTypeForFtp, page.processPage.options.lastOption);
+        driver.findElement(by.css(page.processPage.fields.user)).sendKeys('admin');
+        driver.findElement(by.css(page.processPage.fields.password)).sendKeys('123456');
+
     },
 
-    addCase: function () {
-        page.processPage.chooseDropDownOption(page.processPage.selects.)
-    }
+    addCase: function (caseName) {
+        page.processPage.chooseDropDownOption(page.processPage.selects.satisfy, page.processPage.options.firstOptions);
+        driver.findElement(by.css(page.processPage.fields.caseName)).sendKeys(caseName);
+        page.processPage.chooseDropDownOption(page.processPage.selects.satisfyRegexSelect, page.processPage.options.firstOptions);
+        //driver.wait(until.elementLocated(by.css(page.processPage.fields.satisfyRegex))).sendKeys('/qwe/');
+        page.processPage.chooseDropDownOption(page.processPage.selects.executeFollowingActions, page.processPage.options.firstOptions);
+        driver.wait(until.elementLocated(by.css(page.processPage.fields.followingActions))).sendKeys('admin@admin.com');
+        driver.wait(until.elementLocated(by.css(page.processPage.fields.satisfyRegex))).sendKeys('/qwe/');
+    },
+
+    // addRules: function (selector, option, value, valurSelector) {
+    //     page.processPage.chooseDropDownOption(selector, option);
+    //     return driver.findElement(by.css(valurSelector)).sendKeys(value);
+    // }
 }
