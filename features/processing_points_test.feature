@@ -31,4 +31,8 @@ Feature: Test processing points
     Then I should see copied process
     And I delete created process with API
 
-  Scenario:  
+  @process @delete
+  Scenario: Delete created process
+    When I create new process with API
+    And I click on delete icon
+    Then I shouldn't see created process

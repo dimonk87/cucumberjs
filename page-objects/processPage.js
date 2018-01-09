@@ -23,7 +23,7 @@ module.exports = {
         editProcess: 'mat-row:last-of-type button[tabindex]',
         editPoint: 'mat-card:last-of-type [aria-label="Edit point"]',
         copyProcess: 'mat-row:last-of-type button:first-of-type',
-        deleteProcess: 'mat-row:nth-last-of-type(2) button:last-of-type',
+        deleteProcess: 'mat-row:last-of-type .mat-icon-button:last-of-type',
         deletePartnerFirstConfirm: 'fuse-delete-dialog button:first-of-type',
         deletePartnerSecondConfirm: 'fuse-delete-dialog-confirm .mat-button:first-of-type'
     },
@@ -101,5 +101,16 @@ module.exports = {
         driver.findElement(by.css(page.processPage.fields.processName)).sendKeys('Change' + processName);
         driver.findElement(by.css(page.processPage.fields.ownerForProcess)).clear();
         driver.findElement(by.css(page.processPage.fields.ownerForProcess)).sendKeys('New' + ownerName);
+    },
+
+    deleteCreatedProcess: function () {
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.deleteProcess))).click();
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.deletePartnerFirstConfirm))).click();
+        return driver.wait(until.elementLocated(by.css(page.processPage.buttons.deletePartnerSecondConfirm)))
+            .then(function () {
+                return driver.findElement(by.css(page.processPage.buttons.deletePartnerSecondConfirm)).click();
+            }).then(function () {
+                return driver.wait(until.elementLocated(by.css('mat-spinner')));
+            });
     }
 }

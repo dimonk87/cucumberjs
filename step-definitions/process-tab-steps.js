@@ -66,9 +66,21 @@ module.exports = function () {
     });
 
     this.Then(/^I should see copied process$/, function () {
-        driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)))
+        driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)));
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
         return page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Copy of ' + processName);
+    });
+
+    //Delete created process
+    this.When(/^I click on delete icon$/, function () {
+        helpers.loadPage(shared.testData.url + '/points');
+        return page.processPage.deleteCreatedProcess();
+    });
+    this.Then(/^I shouldn't see created process$/, function () {
+        helpers.loadPage(shared.testData.url + '/points');
+        driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)));
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        return page.loginPage.checkExist(page.processPage.elements.lastProcessName, processName);
     });
 
 
