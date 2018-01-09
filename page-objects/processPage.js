@@ -48,7 +48,9 @@ module.exports = {
 
     elements: {
         lastProcessName: 'mat-row:last-of-type .mat-column-name div',
-        interfaceDirection: 'mat-row:last-of-type .mat-column-interface_direction div'
+        interfaceDirection: 'mat-row:last-of-type .mat-column-interface_direction div',
+        lastProcessOwner: 'mat-row:last-of-type .mat-column-owner div',
+        spinner: 'mat-spinner'
     },
 
     descriptionForProcess: "This information about with this and this is very impotent",
@@ -93,8 +95,11 @@ module.exports = {
         driver.wait(until.elementLocated(by.css(page.processPage.fields.satisfyRegex))).sendKeys('/qwe/');
     },
 
-    // addRules: function (selector, option, value, valurSelector) {
-    //     page.processPage.chooseDropDownOption(selector, option);
-    //     return driver.findElement(by.css(valurSelector)).sendKeys(value);
-    // }
+    editProcess: function (processName, ownerName) {
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.editProcess))).click();
+        driver.wait(until.elementLocated(by.css(page.processPage.fields.processName))).clear();
+        driver.findElement(by.css(page.processPage.fields.processName)).sendKeys('Change' + processName);
+        driver.findElement(by.css(page.processPage.fields.ownerForProcess)).clear();
+        driver.findElement(by.css(page.processPage.fields.ownerForProcess)).sendKeys('New' + ownerName);
+    }
 }

@@ -8,10 +8,27 @@ Feature: Test processing points
   Background:
     Given I am logged in in app as admin
 
-    @process
+  @process
   Scenario: Create new processing point
     When I field in all required fields
     And I click button for create process
     Then I should see created processing point
     And I delete created process with API
 
+  @process
+  Scenario: Edit created processing poin
+    When I create new process with API
+    Then I edit some info in process point
+    And I click button for save edited process
+    Then I should see edit processing point
+    And I delete created process with API
+
+  @process
+  Scenario: Copy created process
+    When I create new process with API
+    Then I push copy icon
+    And I click button for save edited process
+    Then I should see copied process
+    And I delete created process with API
+
+  Scenario:  

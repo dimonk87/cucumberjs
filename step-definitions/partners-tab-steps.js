@@ -53,10 +53,6 @@ module.exports = function () {
     });
 
     //Copy created partner
-    // this.When(/^I click copy and save changes$/, function () {
-    //     helpers.loadPage(shared.testData.url + '/partners');
-    //     return page.partnersPage.copyCreatedPartner(partnerCompany);
-    // });
     this.When(/^I click copy and see Edit form$/, function () {
         helpers.loadPage(shared.testData.url + '/partners');
         driver.wait(until.elementLocated(by.css(page.partnersPage.elements.copyPartnerIcon))).click();

@@ -14,7 +14,7 @@
             "name": "I am logged in in app as admin",
             "result": {
               "status": "passed",
-              "duration": 4579942235
+              "duration": 4617005354
             },
             "line": 9,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I field in all required fields",
             "result": {
               "status": "passed",
-              "duration": 6581955
+              "duration": 3349776
             },
             "line": 13,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I click button for create process",
             "result": {
               "status": "passed",
-              "duration": 231667
+              "duration": 125803
             },
             "line": 14,
             "match": {
@@ -53,7 +53,7 @@
             "name": "I should see created processing point",
             "result": {
               "status": "passed",
-              "duration": 6784652623
+              "duration": 7177623158
             },
             "line": 15,
             "match": {
@@ -66,7 +66,7 @@
             "name": "I delete created process with API",
             "result": {
               "status": "passed",
-              "duration": 229930022
+              "duration": 241712582
             },
             "line": 16,
             "match": {
@@ -78,7 +78,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 308527275
+              "duration": 288449036
             },
             "hidden": true,
             "match": {
@@ -90,6 +90,216 @@
           {
             "name": "@process",
             "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "test-processing-points;edit-created-processing-poin",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Edit created processing poin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am logged in in app as admin",
+            "result": {
+              "status": "passed",
+              "duration": 4043486383
+            },
+            "line": 9,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:7"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I create new process with API",
+            "result": {
+              "status": "passed",
+              "duration": 819629
+            },
+            "line": 20,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:44"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I edit some info in process point",
+            "result": {
+              "status": "passed",
+              "duration": 843089
+            },
+            "line": 21,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I click button for save edited process",
+            "result": {
+              "status": "passed",
+              "duration": 164512
+            },
+            "line": 22,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:51"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see edit processing point",
+            "result": {
+              "status": "passed",
+              "duration": 4696475946
+            },
+            "line": 23,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:54"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I delete created process with API",
+            "result": {
+              "status": "passed",
+              "duration": 232982579
+            },
+            "line": 24,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:35"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 284387546
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@process",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "test-processing-points;copy-created-process",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Copy created process",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am logged in in app as admin",
+            "result": {
+              "status": "passed",
+              "duration": 3964943041
+            },
+            "line": 9,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:7"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I create new process with API",
+            "result": {
+              "status": "passed",
+              "duration": 760686
+            },
+            "line": 28,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:44"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I push copy icon",
+            "result": {
+              "status": "passed",
+              "duration": 2711000244
+            },
+            "line": 29,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:62"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I click button for save edited process",
+            "result": {
+              "status": "passed",
+              "duration": 148090
+            },
+            "line": 30,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:51"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see copied process",
+            "result": {
+              "status": "passed",
+              "duration": 1394515200
+            },
+            "line": 31,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I delete created process with API",
+            "result": {
+              "status": "passed",
+              "duration": 371860886
+            },
+            "line": 32,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\step-definitions\\process-tab-steps.js:35"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 271614235
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Cucumber\\try3\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@process",
+            "line": 26
           }
         ],
         "type": "scenario"

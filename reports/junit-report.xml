@@ -7,15 +7,55 @@
             <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
             </property>
         </properties>
-        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.579942235">
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;create-new-processing-point" time="4.617005354">
         </testcase>
-        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.006581955">
+        <testcase name="When I field in all required fields" classname="test-processing-points;create-new-processing-point" time="0.003349776">
         </testcase>
-        <testcase name="And I click button for create process" classname="test-processing-points;create-new-processing-point" time="0.000231667">
+        <testcase name="And I click button for create process" classname="test-processing-points;create-new-processing-point" time="0.000125803">
         </testcase>
-        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="6.784652623">
+        <testcase name="Then I should see created processing point" classname="test-processing-points;create-new-processing-point" time="7.177623158">
         </testcase>
-        <testcase name="And I delete created process with API" classname="test-processing-points;create-new-processing-point" time="0.229930022">
+        <testcase name="And I delete created process with API" classname="test-processing-points;create-new-processing-point" time="0.241712582">
+        </testcase>
+    </testsuite>
+    <testsuite name="test-processing-points;edit-created-processing-poin" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="@process" value="true">
+            </property>
+            <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;edit-created-processing-poin" time="4.043486383">
+        </testcase>
+        <testcase name="When I create new process with API" classname="test-processing-points;edit-created-processing-poin" time="0.000819629">
+        </testcase>
+        <testcase name="Then I edit some info in process point" classname="test-processing-points;edit-created-processing-poin" time="0.000843089">
+        </testcase>
+        <testcase name="And I click button for save edited process" classname="test-processing-points;edit-created-processing-poin" time="0.000164512">
+        </testcase>
+        <testcase name="Then I should see edit processing point" classname="test-processing-points;edit-created-processing-poin" time="4.696475946">
+        </testcase>
+        <testcase name="And I delete created process with API" classname="test-processing-points;edit-created-processing-poin" time="0.232982579">
+        </testcase>
+    </testsuite>
+    <testsuite name="test-processing-points;copy-created-process" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="@process" value="true">
+            </property>
+            <property name="URI" value="D:/Cucumber/try3/features/processing_points_test.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am logged in in app as admin" classname="test-processing-points;copy-created-process" time="3.964943041">
+        </testcase>
+        <testcase name="When I create new process with API" classname="test-processing-points;copy-created-process" time="0.000760686">
+        </testcase>
+        <testcase name="Then I push copy icon" classname="test-processing-points;copy-created-process" time="2.711000244">
+        </testcase>
+        <testcase name="And I click button for save edited process" classname="test-processing-points;copy-created-process" time="0.00014809">
+        </testcase>
+        <testcase name="Then I should see copied process" classname="test-processing-points;copy-created-process" time="1.3945152">
+        </testcase>
+        <testcase name="And I delete created process with API" classname="test-processing-points;copy-created-process" time="0.371860886">
         </testcase>
     </testsuite>
 </testsuites>

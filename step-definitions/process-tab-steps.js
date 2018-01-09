@@ -40,5 +40,37 @@ module.exports = function () {
             })
     });
 
+    //Edit created processing poin
+    this.When(/^I create new process with API$/, function () {
+        return page.apiRequest.createProcessWithApi(processName, ownerName, caseName);
+    });
+    this.Then(/^I edit some info in process point$/, function () {
+        helpers.loadPage(shared.testData.url + '/points');
+        return page.processPage.editProcess(processName, ownerName);
+    });
+    this.Then(/^I click button for save edited process$/, function () {
+        helpers.clickHiddenElement((page.processPage.buttons.editPoint));
+    });
+    this.Then(/^I should see edit processing point$/, function () {
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Change' + processName);
+        page.loginPage.checkErrors(page.processPage.elements.lastProcessOwner, 'New' + ownerName);
+        return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'FTP - Receive');
+    });
+
+    //Copy created process
+    this.Then(/^I push copy icon$/, function () {
+        helpers.loadPage(shared.testData.url + '/points');
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.copyProcess))).click();
+        return driver.wait(until.elementLocated(by.css(page.processPage.fields.processName)));
+    });
+
+    this.Then(/^I should see copied process$/, function () {
+        driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)))
+        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        return page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Copy of ' + processName);
+    });
+
+
 
 }

@@ -54,6 +54,43 @@ module.exports = {
                 console.log(response.body);
                 return response.data;
             })
+    },
+
+    createProcessWithApi: function (processName, ownerName, caseName) {
+        unirest.post(shared.testData.url + '/api/comm-processes')
+            .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
+            .send({"name": processName, "tags": "", "description": page.processPage.descriptionForProcess, "owner": ownerName, "direction": 1, "interval": 2, "local_dir": "/necessitatibus/nostrum/quia", "email_subscribers": "thelador@gmail.com", "protocol": 1, "partners": [2], "connection": {
+                    "host": "test",
+                    "port": 32034,
+                    "user": "rmaggio",
+                    "password": ">?^wNY.}a|>",
+                    "is_passive_mode": 1,
+                    "dir": "/at/necessitatibus/nostrum/quia",
+                    "connection_method": 1,
+                    "encryption": 4
+                },  "rule_sets": [
+                    {
+                        "name": caseName,
+                        "satisfy_type": 1,
+                        "error_mail_content": "ewe ewe ew ew",
+                        "validation_rules": [
+                            {
+                                "type_id": 5,
+                                "value": null
+                            }
+                        ],
+                        "processing_rules": [
+                            {
+                                "type_id": 7,
+                                "value": "none"
+                            }
+                        ]
+                    }
+                ]})
+            .end(function (response) {
+                console.log(response.body);
+                return response.data;
+            });
     }
 
 };
