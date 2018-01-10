@@ -8,7 +8,7 @@ Feature: Test partners tab
   Background:
     Given I am logged in in app
 
-  @partner @api
+  @partner @api @createPartner
   Scenario: Create new partner
     When I open Add Partner form and fill in all field
     Then I should see created partner

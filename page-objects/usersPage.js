@@ -1,14 +1,14 @@
 module.exports = {
 
     elements: {
-        userNameField: 'input[formcontrolname=name]',
-        userEmailField: 'input[formcontrolname=email]',
-        userPasswordField: 'input[formcontrolname=password]',
-        userPhoneField: 'input[formcontrolname=phone]',
-        createUserButton: 'button[id=add-user-button]',
+        userNameField: 'input-name',
+        userEmailField: 'input-email',
+        userPasswordField: 'input-password',
+        userPhoneField: 'input-phone',
+        createUserButton: '#add-user-button',
         addUserButton: '[aria-label="Add user"]',
         editUserButton: 'button[aria-label="Edit user"]',
-        selectUserRole: 'mat-select.mat-select',
+        selectUserRole: '#input-role',
         selecktRoleManager: 'mat-option[role=option]:nth-of-type(2)',
         selecktRoleAuditor: 'mat-option[role=option]:nth-of-type(4)',
         selektList: '.mat-select-content',
@@ -28,23 +28,23 @@ module.exports = {
 
     createNewUser: function (userName, userEmail) {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.addUserButton))).click();
-        driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).sendKeys(userName);
-        driver.findElement(by.css(page.usersPage.elements.userEmailField)).sendKeys(userEmail);
-        driver.findElement(by.css(page.usersPage.elements.userPasswordField)).sendKeys(page.usersPage.userPassword);
-        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
+        driver.wait(until.elementLocated(by.id(page.usersPage.elements.userNameField))).sendKeys(userName);
+        driver.findElement(by.id(page.usersPage.elements.userEmailField)).sendKeys(userEmail);
+        driver.findElement(by.id(page.usersPage.elements.userPasswordField)).sendKeys(page.usersPage.userPassword);
+        driver.findElement(by.id(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         driver.findElement(by.css(page.usersPage.elements.selectUserRole)).click();
         driver.findElement(by.css(page.usersPage.elements.selecktRoleManager)).click();
-        driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
+        driver.findElement(by.id(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone);
         return driver.findElement(by.css(page.usersPage.elements.addUserButton)).click();
     },
 
     editCreatedUser: function (userName) {
         driver.wait(until.elementLocated(by.css(page.usersPage.elements.editUserIcon))).click();
-        driver.wait(until.elementLocated(by.css(page.usersPage.elements.userNameField))).clear();
-        driver.findElement(by.css(page.usersPage.elements.userNameField)).sendKeys('Change ' + userName);
+        driver.wait(until.elementLocated(by.id(page.usersPage.elements.userNameField))).clear();
+        driver.findElement(by.id(page.usersPage.elements.userNameField)).sendKeys('Change ' + userName);
         helpers.clickHiddenElement(page.usersPage.elements.selectUserRole);
         driver.findElement(by.css(page.usersPage.elements.selecktRoleAuditor)).click();
-        return driver.findElement(by.css(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
+        return driver.findElement(by.id(page.usersPage.elements.userPhoneField)).sendKeys(page.usersPage.userPhone).then(function () {
             return driver.findElement(by.css(page.usersPage.elements.editUserButton)).click();
         });
     },

@@ -28,7 +28,7 @@ module.exports = function () {
         helpers.clickHiddenElement(page.processPage.buttons.addPoint);
     });
     this.Then(/^I should see created processing point$/, function () {
-        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         page.loginPage.checkErrors(page.processPage.elements.lastProcessName, processName);
         return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'FTP - Receive');
     });
@@ -52,7 +52,7 @@ module.exports = function () {
         helpers.clickHiddenElement((page.processPage.buttons.editPoint));
     });
     this.Then(/^I should see edit processing point$/, function () {
-        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Change' + processName);
         page.loginPage.checkErrors(page.processPage.elements.lastProcessOwner, 'New' + ownerName);
         return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'FTP - Receive');
@@ -62,12 +62,12 @@ module.exports = function () {
     this.Then(/^I push copy icon$/, function () {
         helpers.loadPage(shared.testData.url + '/points');
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.copyProcess))).click();
-        return driver.wait(until.elementLocated(by.css(page.processPage.fields.processName)));
+        return driver.wait(until.elementLocated(by.id(page.processPage.fields.processName)));
     });
 
     this.Then(/^I should see copied process$/, function () {
         driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)));
-        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         return page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Copy of ' + processName);
     });
 
@@ -79,7 +79,7 @@ module.exports = function () {
     this.Then(/^I shouldn't see created process$/, function () {
         helpers.loadPage(shared.testData.url + '/points');
         driver.wait(until.elementLocated(by.css(page.processPage.elements.spinner)));
-        driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
+        driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         return page.loginPage.checkExist(page.processPage.elements.lastProcessName, processName);
     });
 

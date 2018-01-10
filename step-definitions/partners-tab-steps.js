@@ -24,7 +24,7 @@ module.exports = function () {
         return page.partnersPage.createNewPartner(partnerName, partnerEmail, partnerCompany);
     });
     this.Then(/^I should see created partner$/, function () {
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.createPartnersButton)));
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.createPartnersButton)));
         page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerName, partnerName);
         page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerEmail, partnerEmail);
         return page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerCompany, partnerCompany);
@@ -46,7 +46,7 @@ module.exports = function () {
         return page.partnersPage.editCreatedPartner(partnerName, partnerEmail, partnerCompany);
     });
     this.Then(/^I should see edited partner with new data$/, function () {
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.createPartnersButton)));
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.createPartnersButton)));
         page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerName, 'Change' + partnerName);
         page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerEmail, 'new' + partnerEmail);
         return page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerCompany, 'New' + partnerCompany);
@@ -56,14 +56,14 @@ module.exports = function () {
     this.When(/^I click copy and see Edit form$/, function () {
         helpers.loadPage(shared.testData.url + '/partners');
         driver.wait(until.elementLocated(by.css(page.partnersPage.elements.copyPartnerIcon))).click();
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.partnerNameField)));
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.partnerNameField)));
         return page.loginPage.checkErrors(page.partnersPage.elements.editFormTitle, 'Edit Partner');
     });
     this.Then(/^I save changes$/, function () {
         helpers.loadPage(shared.testData.url + '/partners');
     });
     this.Then(/^I should see copied partner$/, function () {
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.createPartnersButton)));
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.createPartnersButton)));
         return page.loginPage.checkErrors(page.partnersPage.elements.lastPartnerName, 'Copy of ' + partnerName);
     });
 

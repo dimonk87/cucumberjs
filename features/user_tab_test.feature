@@ -7,7 +7,7 @@ Feature: Test users tab
   Background:
     Given I am logged in
 
-  @user @api
+  @user @api @userCreate
   Scenario: Create new user
     When I open Add user form and fill in all field with valid date
     Then I should see created user

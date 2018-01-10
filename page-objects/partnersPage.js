@@ -1,14 +1,14 @@
 module.exports = {
 
     elements: {
-        partnerNameField: 'input[formcontrolname=name]',
-        partnerEmailField: 'input[formcontrolname=email]',
-        partnerCompanyField: 'input[formcontrolname=company]',
-        partnerPhoneField: 'input[formcontrolname=phone]',
+        partnerNameField: 'input-name',
+        partnerEmailField: 'input-email',
+        partnerCompanyField: 'input-company',
+        partnerPhoneField: 'input-phone',
         noteField: 'textarea[formcontrolname=note]',
         operationNumberField: 'input[formcontrolname="bn"]',
         institutionIdentifierField: 'input[formcontrolname=ik]',
-        createPartnersButton: 'button[id=add-partner-button]',
+        createPartnersButton: 'add-partner-button',
         addPartnerButton: '[aria-label="Add partner"]',
         editPartnerButton: '[aria-label="Edit partner"]',
         editPartnerIcon: 'mat-row:last-of-type [tabindex="0"]',
@@ -23,21 +23,21 @@ module.exports = {
     },
 
     createNewPartner: function (partnerName, partnerEmail, partnerCompany) {
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.createPartnersButton))).click();
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.partnerNameField))).sendKeys(partnerName);
-        driver.findElement(by.css(page.partnersPage.elements.partnerEmailField)).sendKeys(partnerEmail);
-        driver.findElement(by.css(page.partnersPage.elements.partnerCompanyField)).sendKeys(partnerCompany);
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.createPartnersButton))).click();
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.partnerNameField))).sendKeys(partnerName);
+        driver.findElement(by.id(page.partnersPage.elements.partnerEmailField)).sendKeys(partnerEmail);
+        driver.findElement(by.id(page.partnersPage.elements.partnerCompanyField)).sendKeys(partnerCompany);
         return driver.findElement(by.css(page.partnersPage.elements.addPartnerButton)).click();
     },
     
     editCreatedPartner: function (partnerName, partnerEmail, partnerCompany) {
         driver.wait(until.elementLocated(by.css(page.partnersPage.elements.editPartnerIcon))).click();
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.partnerNameField))).clear();
-        driver.findElement(by.css(page.partnersPage.elements.partnerNameField)).sendKeys('Change' + partnerName);
-        driver.findElement(by.css(page.partnersPage.elements.partnerEmailField)).clear();
-        driver.findElement(by.css(page.partnersPage.elements.partnerEmailField)).sendKeys('new' + partnerEmail);
-        driver.findElement(by.css(page.partnersPage.elements.partnerCompanyField)).clear();
-        driver.findElement(by.css(page.partnersPage.elements.partnerCompanyField)).sendKeys('New' + partnerCompany);
+        driver.wait(until.elementLocated(by.id(page.partnersPage.elements.partnerNameField))).clear();
+        driver.findElement(by.id(page.partnersPage.elements.partnerNameField)).sendKeys('Change' + partnerName);
+        driver.findElement(by.id(page.partnersPage.elements.partnerEmailField)).clear();
+        driver.findElement(by.id(page.partnersPage.elements.partnerEmailField)).sendKeys('new' + partnerEmail);
+        driver.findElement(by.id(page.partnersPage.elements.partnerCompanyField)).clear();
+        driver.findElement(by.id(page.partnersPage.elements.partnerCompanyField)).sendKeys('New' + partnerCompany);
         return driver.findElement(by.css(page.partnersPage.elements.editPartnerButton)).click();
     },
 
