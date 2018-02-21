@@ -12,7 +12,7 @@ Feature: Login page test
 
   Scenario: Logged in successfull as admin
     When I logged in on page
-    Then I should see " admin"
+    Then I should see profile name "admin"
 
   Scenario: Try to log in with empty fields
     When I don't fill in fields
@@ -24,7 +24,7 @@ Feature: Login page test
 
   Scenario: Logged in successfull as manager
     When I logged in as a manager
-    Then I should see " manager"
+    Then I should see profile name "manager"
 
   Scenario:  Logged in successfull as viewer
     When I logged in as a viewer

@@ -13,14 +13,14 @@ module.exports = function () {
                 return page.apiRequest.loginWithApi();
             }).then(function (token) {
                 driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
-                driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
+                driver.executeScript(`localStorage.setItem('user', '{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}')`);
             })
     });
 
     //Create new processing point
     this.When(/^I field in all required fields$/, function () {
         helpers.loadPage(shared.testData.url + '/points');
-        page.processPage.addProcessingPoint(processName, ownerName);
+        page.processPage.addProcessingPoint(processName);
         page.processPage.addInterface();
         page.processPage.addCase(caseName);
     });
@@ -30,7 +30,7 @@ module.exports = function () {
     this.Then(/^I should see created processing point$/, function () {
         driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         page.loginPage.checkErrors(page.processPage.elements.lastProcessName, processName);
-        return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'FTP - Receive');
+        return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'Receive');
     });
     this.Then(/^I delete created process with API$/, function () {
         return page.apiRequest.getIdUser('/api/comm-processes')
@@ -46,7 +46,7 @@ module.exports = function () {
     });
     this.Then(/^I edit some info in process point$/, function () {
         helpers.loadPage(shared.testData.url + '/points');
-        return page.processPage.editProcess(processName, ownerName);
+        return page.processPage.editProcess(processName);
     });
     this.Then(/^I click button for save edited process$/, function () {
         helpers.clickHiddenElement((page.processPage.buttons.editPoint));
@@ -54,8 +54,7 @@ module.exports = function () {
     this.Then(/^I should see edit processing point$/, function () {
         driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess)));
         page.loginPage.checkErrors(page.processPage.elements.lastProcessName, 'Change' + processName);
-        page.loginPage.checkErrors(page.processPage.elements.lastProcessOwner, 'New' + ownerName);
-        return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'FTP - Receive');
+        return page.loginPage.checkErrors(page.processPage.elements.interfaceDirection, 'Receive');
     });
 
     //Copy created process

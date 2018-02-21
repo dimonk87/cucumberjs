@@ -23,7 +23,7 @@ module.exports = function () {
                 return page.apiRequest.loginWithApi();
             }).then(function (token) {
                 driver.executeScript(`localStorage.setItem('access_token', '${token}')`);
-                driver.executeScript(`localStorage.setItem('user', '{"data":{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}}')`);
+                driver.executeScript(`localStorage.setItem('user', '{"id":1,"name":"admin","email":"admin@admin.com","phone":null,"isBlocked":false,"role":{"data":{"id":1,"name":"admin"}}}')`);
             })
     });
 
@@ -52,6 +52,7 @@ module.exports = function () {
     });
     this.When(/^I edit user name$/, function () {
         helpers.loadPage(shared.testData.url + '/users');
+        driver.wait(until.elementLocated(by.css('mat-spinner')));
         return page.usersPage.editCreatedUser(userName);
     });
     this.Then(/^I should see edited user$/, function () {

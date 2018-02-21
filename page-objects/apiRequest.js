@@ -59,7 +59,7 @@ module.exports = {
     createProcessWithApi: function (processName, ownerName, caseName) {
         unirest.post(shared.testData.url + '/api/comm-processes')
             .header({'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token})
-            .send({"name": processName, "tags": "", "description": page.processPage.descriptionForProcess, "owner": ownerName, "direction": 1, "interval": 2, "local_dir": "/necessitatibus/nostrum/quia", "email_subscribers": "thelador@gmail.com", "protocol": 1, "partners": [2], "connection": {
+            .send({"name": processName, "tags": "", "description": page.processPage.descriptionForProcess, "direction": 1, "interval": 2, "local_dir": "/necessitatibus/nostrum/quia", "email_subscribers": "thelador@gmail.com", "protocol": 1, "connection": {
                     "host": "test",
                     "port": 32034,
                     "user": "rmaggio",

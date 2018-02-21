@@ -13,7 +13,7 @@ Feature: Test users tab
     Then I should see created user
     And I delete created user with api
 
-  @user @api
+  @user @api @userEdit
   Scenario: Edit created user
     Given I have created user with api
     When I edit user name

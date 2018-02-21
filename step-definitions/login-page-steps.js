@@ -51,8 +51,10 @@ module.exports = function () {
         return page.loginPage.loginFunction(shared.testData.viewerEmail, shared.testData.password);
     });
     this.Then(/^I should see profile name "([^"]*)"$/, function (title) {
-        driver.wait(until.elementLocated(by.css(page.loginPage.elements.processingTabLink))).click();
-        driver.wait(until.elementLocated(by.css(page.loginPage.elements.firstProcess)));
+        driver.wait(until.elementLocated(by.css('mat-spinner')));
+        driver.sleep(1000);
+        //driver.wait(until.elementIsVisible(by.css('mat-spinner')));
+        //driver.wait(until.elementLocated(by.css(page.processPage.buttons.createProcess)));
         return page.loginPage.checkErrors(page.loginPage.elements.profileName, title);
     });
 

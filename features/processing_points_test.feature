@@ -8,14 +8,14 @@ Feature: Test processing points
   Background:
     Given I am logged in in app as admin
 
-  @process
+  @process @processCreate
   Scenario: Create new processing point
     When I field in all required fields
     And I click button for create process
     Then I should see created processing point
     And I delete created process with API
 
-  @process
+  @process @processEdit
   Scenario: Edit created processing poin
     When I create new process with API
     Then I edit some info in process point
@@ -31,7 +31,7 @@ Feature: Test processing points
     Then I should see copied process
     And I delete created process with API
 
-  @process @delete
+  @process @processDelete
   Scenario: Delete created process
     When I create new process with API
     And I click on delete icon

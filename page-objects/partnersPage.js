@@ -43,12 +43,9 @@ module.exports = {
 
     deleteCreatedPartner: function () {
         driver.wait(until.elementLocated(by.css(page.partnersPage.elements.deletePartnerIcon))).click();
-        driver.wait(until.elementLocated(by.css(page.partnersPage.elements.deletePartnerFirstConfirm))).click();
-        return driver.wait(until.elementLocated(by.css(page.partnersPage.elements.deletePartnerSecondConfirm)))
+        return driver.wait(until.elementLocated(by.css(page.partnersPage.elements.deletePartnerFirstConfirm))).click()
             .then(function () {
-                return driver.findElement(by.css(page.partnersPage.elements.deletePartnerSecondConfirm)).click();
-            }).then(function () {
-                return driver.wait(until.elementLocated(by.css('mat-spinner')));
+                 return driver.wait(until.elementLocated(by.css('mat-spinner')));
             });
     }
     

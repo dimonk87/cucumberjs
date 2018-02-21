@@ -36,30 +36,31 @@ module.exports = {
         executeTaskEvery: '#input-interval',
         conectionTypeForFtp: '#input-connection_method',
         satisfy: '#input-1-satisfy_type',
-        satisfyRegexSelect: '#input-1-validation_rules-1-type_id',
-        executeFollowingActions: '#input-1-processing_rules-1-type_id'
+        satisfyRegexSelect: '[data-test="condition_select"]',
+        executeFollowingActions: '[data-test="action_select"]'
     },
 
     options: {
         firstOption: 'mat-option:nth-of-type(2) .mat-pseudo-checkbox',
         lastOption: 'mat-option:last-of-type',
         firstOptions: 'mat-option:first-of-type',
-        fileTransferProtocol: '#mat-option-1',
+        fileTransferProtocol: '[data-test="protocol_option_1"]',
         fTAM: '#mat-option-4',
-        receive: '#mat-option-5',
+        receive: '[data-test="Receive"]',
         send: '#mat-option-6',
         explicitFTPoverTLS: '#mat-option-13',
-        useOnlyUnencryptedFTP: 'mat-option-16',
+        useOnlyUnencryptedFTP: '[data-test="encryption_option_3"]',
         minutes1: '#mat-option-7',
         anonym: '#mat-option-51',
-        all: '#mat-option-17',
-        filenameContainsRegex: '#mat-option-19',
-        sendEmail: '#mat-option-28'
+        all: '[data-test="All"]',
+        filenameContainsRegex: '[data-test="condition_option_1"]',
+        renameFile: '[data-test="action_option_4"]',
+        normalForFtp: '[data-test="Normal"]'
     },
 
     elements: {
         lastProcessName: 'mat-row:last-of-type .mat-column-name div',
-        interfaceDirection: 'mat-row:last-of-type .mat-column-interface_direction div',
+        interfaceDirection: 'mat-row:last-of-type .mat-column-direction_name div',
         lastProcessOwner: 'mat-row:last-of-type .mat-column-owner div',
         spinner: 'mat-spinner'
     },
@@ -71,12 +72,9 @@ module.exports = {
         return helpers.clickHiddenElement(option);
     },
 
-    addProcessingPoint: function (processName, ownerName) {
+    addProcessingPoint: function (processName) {
         driver.wait(until.elementLocated(by.id(page.processPage.buttons.createProcess))).click();
         driver.wait(until.elementLocated(by.id(page.processPage.fields.processName))).sendKeys(processName);
-        driver.findElement(by.id(page.processPage.fields.ownerForProcess)).sendKeys(ownerName);
-        driver.findElement(by.id(page.processPage.selects.partners)).click();
-        driver.wait(until.elementLocated(by.css(page.processPage.options.firstOption))).click();
         driver.findElement(by.id(page.processPage.fields.descriptionForProcess)).sendKeys(page.processPage.descriptionForProcess);
         return driver.findElement(by.id(page.processPage.fields.emailSubscribersForErrors)).sendKeys('admin@admin.com');
     },
@@ -90,37 +88,30 @@ module.exports = {
         page.processPage.chooseDropDownOption(page.processPage.selects.encryptionForFtp, page.processPage.options.useOnlyUnencryptedFTP);
         page.processPage.chooseDropDownOption(page.processPage.selects.executeTaskEvery, page.processPage.options.minutes1);
         driver.findElement(by.id(page.processPage.fields.localDir)).sendKeys(Date.now());
-        page.processPage.chooseDropDownOption(page.processPage.selects.conectionTypeForFtp, page.processPage.options.anonym);
+        page.processPage.chooseDropDownOption(page.processPage.selects.conectionTypeForFtp, page.processPage.options.normalForFtp);
         driver.findElement(by.id(page.processPage.fields.user)).sendKeys('admin');
         driver.findElement(by.id(page.processPage.fields.password)).sendKeys('123456');
-
     },
 
     addCase: function (caseName) {
         page.processPage.chooseDropDownOption(page.processPage.selects.satisfy, page.processPage.options.all);
         driver.findElement(by.id(page.processPage.fields.caseName)).sendKeys(caseName);
         page.processPage.chooseDropDownOption(page.processPage.selects.satisfyRegexSelect, page.processPage.options.filenameContainsRegex);
-        page.processPage.chooseDropDownOption(page.processPage.selects.executeFollowingActions, page.processPage.options.sendEmail);
-        driver.wait(until.elementLocated(by.id(page.processPage.fields.followingActions))).sendKeys('admin@admin.com');
         driver.wait(until.elementLocated(by.id(page.processPage.fields.satisfyRegex))).sendKeys('/qwe/');
+        page.processPage.chooseDropDownOption(page.processPage.selects.executeFollowingActions, page.processPage.options.renameFile);
+        driver.wait(until.elementLocated(by.id(page.processPage.fields.followingActions))).sendKeys(Date.now());
+
     },
 
-    editProcess: function (processName, ownerName) {
+    editProcess: function (processName) {
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.editProcess))).click();
         driver.wait(until.elementLocated(by.id(page.processPage.fields.processName))).clear();
         driver.findElement(by.id(page.processPage.fields.processName)).sendKeys('Change' + processName);
-        driver.findElement(by.id(page.processPage.fields.ownerForProcess)).clear();
-        driver.findElement(by.id(page.processPage.fields.ownerForProcess)).sendKeys('New' + ownerName);
     },
 
     deleteCreatedProcess: function () {
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.deleteProcess))).click();
         driver.wait(until.elementLocated(by.css(page.processPage.buttons.deletePartnerFirstConfirm))).click();
-        return driver.wait(until.elementLocated(by.css(page.processPage.buttons.deletePartnerSecondConfirm)))
-            .then(function () {
-                return driver.findElement(by.css(page.processPage.buttons.deletePartnerSecondConfirm)).click();
-            }).then(function () {
-                return driver.wait(until.elementLocated(by.css('mat-spinner')));
-            });
+        return driver.wait(until.elementLocated(by.css('mat-spinner')));
     }
 }
